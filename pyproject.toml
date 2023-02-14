@@ -1,0 +1,12 @@
+[tool.poetry]
+name = "np_notebooks"
+version = "0.1.0"
+description = "IPython notebooks for Mindscope Neuropixels workflows"
+authors = ["bjhardcastle <ben.hardcastle@alleninstitute.org>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+np-services = ">=0.1.9"
+np-workflows = "^1.2.0"
+jupyterlab = "^3.6"
+poetry = "^1.3.2"
