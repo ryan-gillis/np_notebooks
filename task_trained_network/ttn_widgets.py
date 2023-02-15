@@ -71,7 +71,7 @@ class TTNSelectedSession:
     def script(self) -> str:
         logger.warning(f'Using hard-coded script in notebooks directory for testing')
         # will eventually point to 'C:/ProgramData/StimulusFiles/dev/oct22_tt_stim_script.py'
-        return pathlib.Path('oct22_tt_stim_script.py').resolve().as_posix()
+        return np_config.local_to_unc(np_config.Rig().sync, pathlib.Path('oct22_tt_stim_script.py').resolve()).as_posix()
     
     @property
     def params(self) -> dict:
