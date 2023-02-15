@@ -34,7 +34,7 @@ def stim_repeats(old: int, reversed: int, annotated: int) -> dict[str, dict[str,
     return {'stim_repeats': dict(old=old, reversed=reversed, annotated=annotated)}
 
 def opto_params(pretest=False):
-    params = dict(level_list=[1.15, 1.28, 1.345])
+    params = dict(level_list=[1.35])
     if pretest: 
         params.update(**dict(operation_mode='pretest'))
     else: 
