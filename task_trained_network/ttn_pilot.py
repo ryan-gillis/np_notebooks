@@ -34,7 +34,7 @@ def stim_repeats(old: int, reversed: int, annotated: int) -> dict[str, dict[str,
     return {'stim_repeats': dict(old=old, reversed=reversed, annotated=annotated)}
 
 def opto_params(pretest=False):
-    params = dict(level_list=[1.35])
+    params = dict(level_list= [1.35])# [0.77, 0.97, 1.35]
     if pretest: 
         params.update(**dict(operation_mode='pretest'))
     else: 
@@ -44,9 +44,27 @@ def opto_params(pretest=False):
 def mapping_params(pretest=False):
     return {}
 
+import configparser
+# import np_config
+parser = configparser.RawConfigParser()
+parser.read((np_config.Rig().paths['Camstim'].parent / 'config' / 'stim.cfg').as_posix())
+
+camstim_default_config = {}
+for section in parser.sections():
+    camstim_default_config[section] = {}
+    for k,v in parser[section].items():
+        try:
+            value = eval(v) # this removes comments in config and converts values to expected datatype
+        except:
+            continue
+        else:
+            camstim_default_config[section][k] = value
+
+
+
 class TTNSelectedSession:
     
-    common_params: ClassVar[dict] = {}
+    common_params: ClassVar[dict] = camstim_default_config
     "Will be updated with `session_params` when a session is selected."
     
     session_params: ClassVar[dict[TTNSession, dict]] = {
