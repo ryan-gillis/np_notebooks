@@ -1,7 +1,9 @@
 import configparser
+import copy
 import dataclasses
 import datetime
 import enum
+import functools
 import pathlib
 import threading
 import time
@@ -12,13 +14,12 @@ import IPython.display
 import ipywidgets as ipw
 import np_config
 import np_logging
-import np_session
 import np_services
+import np_session
+import np_workflows.npxc as npxc
 import PIL.Image
 import pydantic
 from pyparsing import Any
-
-import np_workflows.npxc as npxc
 
 logger = np_logging.getLogger(__name__)
 
@@ -40,6 +41,7 @@ default_ttn_params = {}
 
 # camstim defaults ---------------------------------------------------------------------
 # fetched from config file on the Stim computer
+
 parser = configparser.RawConfigParser()
 parser.read((np_config.Rig().paths['Camstim'].parent / 'config' / 'stim.cfg').as_posix())
 
@@ -54,18 +56,20 @@ for section in parser.sections():
         else:
             camstim_default_config[section][k] = value
 
-default_ttn_params['camstim_defaults'] = camstim_default_config
+default_ttn_params.update(**camstim_default_config)
+
+
 
 # main stimulus defaults ---------------------------------------------------------------
 default_ttn_params['main'] = {}
 
 default_ttn_params['main']['sweepstim'] = {
-	    'syncsqr': True,
-        'syncsqrloc': (875,550),
-        'syncsqrsize': (150,150),
-        'syncpulse': True,
-        'syncpulseport': 1,
-        'syncpulselines': [5, 6],  # frame, start/stop
+	    # 'syncsqr': True,
+        # 'syncsqrloc': (875,550),
+        # 'syncsqrsize': (150,150),
+        # 'syncpulse': True,
+        # 'syncpulseport': 1,
+        # 'syncpulselines': [5, 6],  # frame, start/stop
         'trigger_delay_sec': 5.0,
     }
 default_ttn_params['main']['movie_path'] = 'C:/ProgramData/StimulusFiles/dev/'
@@ -75,23 +79,47 @@ default_ttn_params['main']['monitor'] = 'GammaCorrect30'    #! MUST CONFIRM: val
 
 # other parameters that vary depending on session type (pretest, hab, ecephys):
 
-def build_session_stim_repeats(old: int, reversed: int, annotated: int) -> dict[str, dict[str, int]]:
-    return {'stim_repeats': dict(old=old, reversed=reversed, annotated=annotated)}
+def build_session_stim_params(key: str, old: int, reversed: int, annotated: int) -> dict[str, dict[str, int]]:
+    return {key: dict(old=old, reversed=reversed, annotated=annotated)}
 
 def session_stim_repeats(session: TTNSession) -> dict[str, dict[str, int]]:
-    "`'main'` key in params dict should be updated with the returned dict."
+    repeats = functools.partial(build_session_stim_params, 'stim_repeats')
     match session:
         case TTNSession.PRETEST:
-            return build_session_stim_repeats(1, 0, 0)
+            return repeats(1, 1, 1)
         case TTNSession.HAB_60:
-            return build_session_stim_repeats(15, 5, 1)
+            return repeats(15, 5, 1)
         case TTNSession.HAB_90:
-            return build_session_stim_repeats(20, 7, 2)
+            return repeats(20, 7, 2)
         case TTNSession.HAB_120 | TTNSession.ECEPHYS:
-            return build_session_stim_repeats(25, 8, 2)
+            return repeats(25, 8, 2)
         case _:
             raise ValueError(f"Stim repeats not implemented for {session}")
         
+def session_stim_lengths(session: TTNSession) -> dict[str, dict[str, int]]:
+    lengths_sec = functools.partial(build_session_stim_params, 'stim_lengths_sec')
+    match session:
+        case TTNSession.PRETEST:
+            return lengths_sec(2, 2, 2)
+        case _:
+            return lengths_sec(40, 40, 60)
+        
+def main_blank_screen(session: TTNSession) -> dict[str, int]:
+    match session:
+        case TTNSession.PRETEST:
+            return {'pre_blank_screen_sec': 1, 'post_blank_screen_sec': 1}
+        case _:
+            return {'pre_blank_screen_sec': 2, 'post_blank_screen_sec': 2}
+            
+def session_stim_params(session: TTNSession) -> dict[str, Any]:
+    params  = copy.deepcopy(default_ttn_params['main'])
+    params.update(session_stim_repeats(session))
+    params.update(session_stim_lengths(session))
+    params.update(main_blank_screen(session))
+    return params
+
+
+
 # optotagging defaults -----------------------------------------------------------------
 
 default_ttn_params['opto'] = {}
@@ -100,18 +128,16 @@ default_ttn_params['opto_script'] = 'C:/ProgramData/StimulusFiles/dev/opto_taggi
 # all parameters depend on session type (pretest, hab, ecephys):
 
 def session_opto_params(session: TTNSession, mouse: str | int | np_session.Mouse) -> dict[str, dict[str, str | list[float] | Literal['pretest', 'experiment']]]:
-    "`'opto'` key in params dict should be updated with the returned dict (which will be empty for habs)."
+    "All params for opto depending on session (e.g. will be empty for habs)."
 
     def opto_mouse_id(mouse_id: str | int | np_session.Mouse) -> dict[str, str]:
         return {'mouseID': str(mouse_id)}
 
     def opto_levels(session: TTNSession) -> dict[str, list[float]]:
-        default_opto_levels: list[float] = default_ttn_params['camstim_defaults']['Optogenetics']['level_list']
+        default_opto_levels: list[float] = default_ttn_params['Optogenetics']['level_list']
         match session:
-            case TTNSession.PRETEST:
-                return {'level_list': [max(default_opto_levels)]}
-            case TTNSession.ECEPHYS:
-                return {'level_list': default_opto_levels}
+            case TTNSession.PRETEST | TTNSession.ECEPHYS:
+                return {'level_list': sorted(default_opto_levels)[-2:]}
             case _:
                 raise ValueError(f"Opto levels not implemented for {session}")
             
@@ -126,7 +152,7 @@ def session_opto_params(session: TTNSession, mouse: str | int | np_session.Mouse
             
     match session:
         case TTNSession.PRETEST | TTNSession.ECEPHYS:
-            params = {}
+            params  = copy.deepcopy(default_ttn_params['opto'])
             params.update(opto_mouse_id(mouse))
             params.update(opto_levels(session))
             params.update(opto_operation_mode(session))
@@ -142,7 +168,7 @@ def session_opto_params(session: TTNSession, mouse: str | int | np_session.Mouse
 default_ttn_params['mapping'] = {}
 
 default_ttn_params['mapping']['monitor'] = 'Gamma1.Luminance50'
-default_ttn_params['mapping']['gabor_path'] = 'gabor_20_deg_250ms.stim' #? c:/programdata/stimulusfiles/dev/
+default_ttn_params['mapping']['gabor_path'] = 'gabor_20_deg_250ms.stim'
 default_ttn_params['mapping']['flash_path'] = 'flash_250ms.stim'
 default_ttn_params['mapping']['gabor_duration_seconds'] = 1200 
 default_ttn_params['mapping']['flash_duration_seconds'] = 300 
@@ -177,18 +203,28 @@ def session_mapping_params(session: TTNSession) -> dict[str, dict[str, int]]:
         # 0 = full length = gabor_duration + flash_duration = maximum possible
         match session:
             case TTNSession.PRETEST:
-                return {'max_total_duration_minutes': 0.5}
-            case TTNSession.ECEPHYS:
+                return {'max_total_duration_minutes': 0.1}
+            case TTNSession.ECEPHYS | TTNSession.HAB_120:
                 return {'max_total_duration_minutes': 10} 
             case _:
                 raise ValueError(f"Mapping params not implemented for {session}")
             
+    def mapping_blank_screen(session: TTNSession) -> dict[str, int]:
+        match session:
+            case TTNSession.PRETEST:
+                return {'pre_blank_screen_sec': 1, 'post_blank_screen_sec': 1}
+            case TTNSession.ECEPHYS | TTNSession.HAB_120:
+                return {'pre_blank_screen_sec': 10, 'post_blank_screen_sec': 10}
+            case _:
+                raise ValueError(f"Mapping params not implemented for {session}")
+            
     match session:
-        case TTNSession.PRETEST | TTNSession.ECEPHYS:
-            params = {}
+        case TTNSession.PRETEST | TTNSession.ECEPHYS | TTNSession.HAB_120:
+            params = copy.deepcopy(default_ttn_params['mapping'])
             params.update(mapping_duration(session))
+            params.update(mapping_blank_screen(session))
             return params
-        case TTNSession.HAB_60 | TTNSession.HAB_90 | TTNSession.HAB_120:
+        case TTNSession.HAB_60 | TTNSession.HAB_90:
             return {}
         case _:
             raise ValueError(f"Mapping params not implemented for {session}")
@@ -200,6 +236,7 @@ class TTNSelectedSession:
     "Will be updated with `session_params` when a session is selected."
     
     opto_script: ClassVar[str] = 'C:/ProgramData/StimulusFiles/dev/opto_tagging_v2.py'
+    "Used with `opto_params`"
     
     def __init__(self, session: str | TTNSession, mouse: str | int | np_session.Mouse):
         if isinstance(session, str):
@@ -211,23 +248,31 @@ class TTNSelectedSession:
         return f'{self.__class__.__name__}({self.session}, {self.mouse})'
     
     @property
-    def script(self) -> str:
+    def mapping_and_main_script(self) -> str:
+        "Used together with `all_params` to run mapping and main stim script."
         logger.warning(f'Using hard-coded script in notebooks directory for testing')
         # will eventually point to 'C:/ProgramData/StimulusFiles/dev/oct22_tt_stim_script.py'
         return np_config.local_to_unc(np_config.Rig().sync, pathlib.Path('oct22_tt_stim_script.py').resolve()).as_posix()
     
     @property
-    def session_params(self) -> dict[Literal['main', 'camstim_defaults', 'mapping', 'opto'], dict[str, Any]]:
-        params = self.common_params.copy()
-        params['main'].update(session_stim_repeats(self.session))
-        params['mapping'].update(session_mapping_params(self.session))
-        params['opto'].update(session_opto_params(self.session, self.mouse))
+    def all_params(self) -> dict[Literal['main', 'mapping', 'opto'], dict[str, Any]]:
+        params = copy.deepcopy(self.common_params)
+        params['main'] = self.main_params
+        params['mapping'] = self.mapping_params
+        params['opto'] = self.opto_params
         return params
     
     @property
+    def main_params(self) -> dict[str, Any]:
+        return session_stim_params(self.session)
+    
+    @property
+    def mapping_params(self) -> dict[str, Any]:
+        return session_mapping_params(self.session)
+    
+    @property
     def opto_params(self) -> dict[str, Any]:
-        return self.session_params['opto']
-        
+        return session_opto_params(self.session, self.mouse)
     
 def stim_session_select_widget(mouse: str | int | np_session.Mouse) -> TTNSelectedSession:
     """Select a stimulus session (hab, pretest, ecephys) to run."""
