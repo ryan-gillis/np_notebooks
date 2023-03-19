@@ -1,5 +1,5 @@
 echo off
-title Reset notebooks | Update Python env | Launch JupyterLab
+title Reset notebooks - Update Python env - Launch JupyterLab
 
 taskkill /f /im JupyterLab.exe
 
