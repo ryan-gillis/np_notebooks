@@ -1,5 +1,5 @@
 echo off
-title Reset notebooks and update Python env
+title Reset notebooks | Update Python env | Launch JupyterLab
 
 taskkill /f /im JupyterLab.exe
 
@@ -16,8 +16,7 @@ git clean -n -f -d
 
 @REM y for yes: default behavior is to delete untracked files in np_notebooks
 set clean=y
-
-set /p clean=The above files/folders will be deleted. Clean? (y/n) [%clean%]
+@REM set /p clean=The above files/folders will be deleted. Clean? (y/n) [%clean%]
 IF not %clean%==n (
 git clean -f -d
 )
