@@ -10,9 +10,9 @@ call .venv\scripts\activate.bat
 echo git reset
 git reset --hard -q
 
-@REM first display the files without deleting, in case the user isn't aware of what this script does
 echo git clean
-git clean -n -f -d
+@REM first display the files without deleting, in case the user isn't aware of what this script does
+@REM git clean -n -f -d
 
 @REM y for yes: default behavior is to delete untracked files in np_notebooks
 set clean=y
