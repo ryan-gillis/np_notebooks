@@ -5,7 +5,7 @@ taskkill /f /im JupyterLab.exe
 
 cd c:\users\svc_neuropix\documents\github\np_notebooks
 
-call \\allen\programs\mindscope\workgroups\np-exp\envs\win\np_notebooks\3.11\.venv\Scripts\activate
+call .venv\scripts\activate.bat
 
 echo git reset
 git reset --hard -q
@@ -23,7 +23,7 @@ git clean -f -d
 
 git pull origin main
 
-python -m pip install -U np_workflows --extra-index-url https://pypi.org/simple --upgrade-strategy eager
+python -m pdm update np_workflows --no-self
 
 start C:\JupyterLab\JupyterLab.exe
 
