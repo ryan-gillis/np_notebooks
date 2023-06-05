@@ -27,4 +27,4 @@ python -m pip install -U np_workflows --extra-index-url https://pypi.org/simple 
 
 start C:\JupyterLab\JupyterLab.exe
 
-exit /b
+exit /b 
