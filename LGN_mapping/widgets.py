@@ -1,3 +1,5 @@
+import time
+
 import ipywidgets as ipw
 import np_services
 
