@@ -2,6 +2,7 @@ echo off
 title Reset notebooks - Update Python env - Launch JupyterLab
 
 taskkill /f /im JupyterLab.exe
+taskkill /f /im python.exe
 
 cd c:\users\svc_neuropix\documents\github\np_notebooks
 
