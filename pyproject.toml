@@ -6,5 +6,5 @@ authors = [
 requires-python = ">=3.11, <3.12"
 dependencies = [
     "jupyterlab>=3.6",
-    "np-workflows>=1.5.2",
+    "np-workflows>=1.5.3",
 ]
