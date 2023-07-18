@@ -163,3 +163,4 @@ cython_debug/
 !*warning.log
 .vscode/
 !.vscode/settings.json
+.nb-venv
