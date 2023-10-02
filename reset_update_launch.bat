@@ -26,7 +26,7 @@ git clean -f -d
 git pull origin main
 
 @REM python -m pip install -U np_workflows --extra-index-url https://pypi.org/simple --upgrade-strategy eager
-python -m pdm install
+python -m pdm update np_workflows --no-self
 
 start C:\JupyterLab\JupyterLab.exe
 
