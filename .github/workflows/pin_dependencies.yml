@@ -1,0 +1,44 @@
+# This workflow will use pdm to solve an environment for the dependencies specified in pyproject.toml. 
+# The frozen env will be available as a .lock file for use with pdm and a requirements.txt file for pip.
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: Publish Python package
+
+on:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - 'pyproject.toml'
+    
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/master' }}
+      
+jobs:
+  package:
+
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        python-version: ["3.11"]
+    permissions: write-all
+
+    steps:
+    - uses: actions/checkout@v3
+        
+    - uses: pdm-project/setup-pdm@v3
+      with:
+        version: 'head'     
+        python-version: ${{ matrix.python-version }}
+        update-python: true
+        cache: true
+
+    - name: Install package
+      run: |
+        pdm install
+        
+    - name: Add requirements.txt
+      run: |
+        pdm export --without-hashes -o requirements.txt
