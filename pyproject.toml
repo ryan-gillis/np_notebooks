@@ -1,10 +1,7 @@
 [project]
 description = "IPython notebooks for Mindscope Neuropixels workflows"
 authors = [
-    {name = "bjhardcastle", email = "ben.hardcastle@alleninstitute.org"}
+    { name = "bjhardcastle", email = "ben.hardcastle@alleninstitute.org" },
 ]
 requires-python = ">=3.11, <3.12"
-dependencies = [
-    "jupyterlab>=3.6",
-    "np-workflows>=1.6.40",
-]
+dependencies = ["jupyterlab>=3.6", "np-workflows>=1.6.41"]
