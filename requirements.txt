@@ -126,7 +126,7 @@ np-probe-targets==0.0.12
 np-services==0.1.53
 np-session==0.6.38
 np-tools==0.1.20
-np-workflows==1.6.40
+np-workflows==1.6.41
 numexpr==2.8.4
 numpy==1.25.1
 otumat==0.3.1

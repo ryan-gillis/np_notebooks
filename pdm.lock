@@ -6,7 +6,7 @@ groups = ["default"]
 cross_platform = true
 static_urls = false
 lock_version = "4.3"
-content_hash = "sha256:d2fc43a93ab4eeb27aeb0734ba4271ee8a4239ce5710c5705632680460677159"
+content_hash = "sha256:9f8264643a36c7172476f4b9d205b846b19052fb7732c1a24e63f37ea6cd24ab"
 
 [[package]]
 name = "aiobotocore"
@@ -2761,7 +2761,7 @@ files = [
 
 [[package]]
 name = "np-workflows"
-version = "1.6.40"
+version = "1.6.41"
 requires_python = "==3.11.*"
 summary = "Ecephys and behavior workflows for the Mindscope Neuropixels team."
 dependencies = [
@@ -2782,8 +2782,8 @@ dependencies = [
     "universal-pathlib>=0.1.0",
 ]
 files = [
-    {file = "np_workflows-1.6.40-py3-none-any.whl", hash = "sha256:ba365d03d4488e4b759139957534f36155bfed8253af8b5485cccc5e0e2cc5d7"},
-    {file = "np_workflows-1.6.40.tar.gz", hash = "sha256:2c98aedc4fa26b07cc900e09f02fd02f5e78c195a70ace61b93cc7c2fcc03c74"},
+    {file = "np_workflows-1.6.41-py3-none-any.whl", hash = "sha256:006a9f2e8961cba3100f642fb2856f1964049bd7d8ae8ac19616570fd14b9920"},
+    {file = "np_workflows-1.6.41.tar.gz", hash = "sha256:2ac1aff520fb7ecb9c24df7ed1971d465458d20f53e723cd35a2e56d7c264b30"},
 ]
 
 [[package]]
