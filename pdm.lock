@@ -6,7 +6,7 @@ groups = ["default"]
 cross_platform = true
 static_urls = false
 lock_version = "4.3"
-content_hash = "sha256:d693e5fa6bf48e10b36c40f7fddc8f8556a196a10c2b8f9510c02e702c0271fd"
+content_hash = "sha256:f0718d99f6d8384f0244dcd6530f8215d35fe33ba02dde546e9803837060e380"
 
 [[package]]
 name = "adbc-driver-manager"
@@ -3023,7 +3023,7 @@ files = [
 
 [[package]]
 name = "np-workflows"
-version = "1.6.42"
+version = "1.6.43"
 requires_python = "==3.11.*"
 summary = "Ecephys and behavior workflows for the Mindscope Neuropixels team."
 dependencies = [
@@ -3044,8 +3044,8 @@ dependencies = [
     "universal-pathlib>=0.1.0",
 ]
 files = [
-    {file = "np_workflows-1.6.42-py3-none-any.whl", hash = "sha256:4c31fd684e13ffdc1d3534491bfc248737d529be2aad56422cc594862131eb6d"},
-    {file = "np_workflows-1.6.42.tar.gz", hash = "sha256:b95a4973f2f1454cef28dbce63a07d4916996074ea5bf45bda832ded0d299d8d"},
+    {file = "np_workflows-1.6.43-py3-none-any.whl", hash = "sha256:8d7ba949bc95a9325650ae89dc96050de99d1b2957aa310d15eeaf2f7627004a"},
+    {file = "np_workflows-1.6.43.tar.gz", hash = "sha256:1e51a77f90d7ece07518b6a987535e6a757e32a8fc4ec9c88ee0996723c20010"},
 ]
 
 [[package]]
