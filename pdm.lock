@@ -6,7 +6,7 @@ groups = ["default"]
 cross_platform = true
 static_urls = false
 lock_version = "4.3"
-content_hash = "sha256:0cd1fed70f560e2e1700ba7e29e932c426041490e8ed2b648d91c8a739d41f04"
+content_hash = "sha256:d693e5fa6bf48e10b36c40f7fddc8f8556a196a10c2b8f9510c02e702c0271fd"
 
 [[package]]
 name = "adbc-driver-manager"
@@ -3087,7 +3087,7 @@ files = [
 
 [[package]]
 name = "npc-sessions"
-version = "0.0.100"
+version = "0.0.101"
 requires_python = ">=3.9"
 summary = "Tools and interfaces for working with behavior and epyhys sessions from the Mindscope Neuropixels team, in the cloud."
 dependencies = [
@@ -3122,8 +3122,8 @@ dependencies = [
     "zarr>=2.16.1",
 ]
 files = [
-    {file = "npc_sessions-0.0.100-py3-none-any.whl", hash = "sha256:32f07199fe5a6bed711787f1269f989a3dfac07808f83a6f48946f8fc79c163b"},
-    {file = "npc_sessions-0.0.100.tar.gz", hash = "sha256:af463a4c4285815afa122b3fa5e2ba474ba85caf54cfec08c3786f41a9e8c6b1"},
+    {file = "npc_sessions-0.0.101-py3-none-any.whl", hash = "sha256:4d3eaa5a65c7476302673043453a94def5576cf1d4bb1808e1fcae730c562f56"},
+    {file = "npc_sessions-0.0.101.tar.gz", hash = "sha256:9ce8af8af23f25097617174923f11d192f15e6164be6069ed24a89958233cb4c"},
 ]
 
 [[package]]
