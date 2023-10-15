@@ -49,6 +49,7 @@ deprecated==1.2.14
 djsciops==1.5.1
 DynamicRoutingTask==0.1.24
 entrypoints==0.4
+et-xmlfile==1.1.0
 executing==1.2.0
 fabric==2.7.1
 fasteners==0.19
@@ -141,14 +142,15 @@ np-services==0.1.53
 np-session==0.6.38
 np-tools==0.1.20
 np-workflows==1.6.44
-npc-lims==0.1.79
-npc-session==0.1.27
-npc-sessions==0.0.102
+npc-lims==0.1.81
+npc-session==0.1.28
+npc-sessions==0.0.104
 numba==0.58.0
 numcodecs==0.11.0
 numexpr==2.8.4
 numpy==1.25.1
 opencv-python-headless==4.8.1.78
+openpyxl==3.1.2
 otumat==0.3.1
 overrides==7.3.1
 packaging==23.1
@@ -231,9 +233,6 @@ tinycss2==1.2.1
 tornado==6.3.2
 tqdm==4.65.0
 traitlets==5.9.0
-types-pyOpenSSL==23.2.0.2
-types-PyYAML==6.0.12.12
-types-redis==4.6.0.7
 types-singledispatch==4.0.0.1
 typing-extensions==4.7.1
 universal-pathlib==0.1.3
