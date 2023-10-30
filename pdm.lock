@@ -3,10 +3,9 @@
 
 [metadata]
 groups = ["default"]
-cross_platform = true
-static_urls = false
-lock_version = "4.3"
-content_hash = "sha256:df84a68b5616e82c3e64d5c4891ca16e2c2b6909fcc517d42a49defcf84a86be"
+strategy = ["cross_platform"]
+lock_version = "4.4"
+content_hash = "sha256:e6c971dea8e8f8bea96cf14a53c6c3a55024b1afee959bbb95f2719c81e1f119"
 
 [[package]]
 name = "adbc-driver-manager"
@@ -2957,15 +2956,15 @@ files = [
 
 [[package]]
 name = "np-probe-targets"
-version = "0.0.11"
+version = "0.0.12"
 requires_python = ">=3.8"
 summary = "Tools for Neuropixels probe insertion: providing suggested targets, recording actual insertions, storing notes."
 dependencies = [
     "ipywidgets>=7",
 ]
 files = [
-    {file = "np_probe_targets-0.0.11-py3-none-any.whl", hash = "sha256:bf6f97af8493fd0ad26d121620dc4d4231828896d3ed394699fe45c0d74e9cdc"},
-    {file = "np_probe_targets-0.0.11.tar.gz", hash = "sha256:8fbae22ec51b9dbdcb8455f35ee69002947faf48df6049e3fd854eafae39bec0"},
+    {file = "np_probe_targets-0.0.12-py3-none-any.whl", hash = "sha256:07a39df5f6da96d601f0fb508d1212e5e11ea4d9865e47772922141dfb48da73"},
+    {file = "np_probe_targets-0.0.12.tar.gz", hash = "sha256:9f772fed70d5ac65e2a50150fba52277233a56d59e49431d1815b2e1669c4270"},
 ]
 
 [[package]]
@@ -3033,7 +3032,7 @@ files = [
 
 [[package]]
 name = "np-workflows"
-version = "1.6.45"
+version = "1.6.46"
 requires_python = "==3.11.*"
 summary = "Ecephys and behavior workflows for the Mindscope Neuropixels team."
 dependencies = [
@@ -3045,7 +3044,7 @@ dependencies = [
     "np-config>=0.4.20",
     "np-datajoint",
     "np-jobs>=0.0.3",
-    "np-probe-targets>=0.0.11",
+    "np-probe-targets>=0.0.12",
     "np-services>=0.1.53",
     "np-session>=0.6.38",
     "np-tools>=0.1.14",
@@ -3054,18 +3053,18 @@ dependencies = [
     "universal-pathlib>=0.1.0",
 ]
 files = [
-    {file = "np_workflows-1.6.45-py3-none-any.whl", hash = "sha256:b80b7a27092ddb205e1b666335dc6f26e7d756eb8cdf1e775d3e26376c090c81"},
-    {file = "np_workflows-1.6.45.tar.gz", hash = "sha256:3f00c4d3977893f97a14de1a39a9794ac5323056caaafea7c8c58b8b8ca6aa65"},
+    {file = "np_workflows-1.6.46-py3-none-any.whl", hash = "sha256:0167d321a615fdddb19bb7315ff7fcba1ed8d04d6da308f5ce8d27d6119be769"},
+    {file = "np_workflows-1.6.46.tar.gz", hash = "sha256:578865fde9082eea481341651ec42a86e33d2a880ffa6ee9cad1010b1e4cfbb0"},
 ]
 
 [[package]]
 name = "npc-lims"
-version = "0.1.81"
+version = "0.1.87"
 requires_python = ">=3.9"
 summary = "Tools to fetch and update paths, metadata and state for Mindscope Neuropixels sessions, in the cloud."
 dependencies = [
     "aind-codeocean-api>=0.2.4",
-    "npc-session>=0.1.28",
+    "npc-session>=0.1.30",
     "openpyxl>=3.1.2",
     "pydbhub-bjh>=0.0.8",
     "pyopenssl>=23.2.0",
@@ -3077,26 +3076,26 @@ dependencies = [
     "universal-pathlib>=0.1.1",
 ]
 files = [
-    {file = "npc_lims-0.1.81-py3-none-any.whl", hash = "sha256:4d4a6780c9dab2d34af594e7ad77c6e55e77843a5ada8ba2b987493fb9b90fed"},
-    {file = "npc_lims-0.1.81.tar.gz", hash = "sha256:f88ab74e72c2a43934a2de7b86330c045e40d1183b26cd67e0683a6a7a29d193"},
+    {file = "npc_lims-0.1.87-py3-none-any.whl", hash = "sha256:48d59cd87c4c656cb2a6692e9726e64a34039b0e1596d1d6410d9eef36ad3b49"},
+    {file = "npc_lims-0.1.87.tar.gz", hash = "sha256:8575bc2e78f5bfcb3fd7985b57b8277f0514b83805e11cb913744b2f868adcbb"},
 ]
 
 [[package]]
 name = "npc-session"
-version = "0.1.28"
+version = "0.1.30"
 requires_python = ">=3.9"
 summary = "Basic tools for parsing subject, session, date and time associated with data from the Mindscope Neuropixels team, in the cloud."
 dependencies = [
     "typing-extensions>=4.7.1",
 ]
 files = [
-    {file = "npc_session-0.1.28-py3-none-any.whl", hash = "sha256:e32e386a3a0f0b86d052e63f0c2f370a74e51c75a3cdf44cb0fe95785d9f45ad"},
-    {file = "npc_session-0.1.28.tar.gz", hash = "sha256:446581ecf4b5b227202a194f93c564302cedb77b329e06a58aae1078b21e9ff9"},
+    {file = "npc_session-0.1.30-py3-none-any.whl", hash = "sha256:922dc69683e84b7c96bc378d675c1422bf7b2f01494925fe3333ff889ae21654"},
+    {file = "npc_session-0.1.30.tar.gz", hash = "sha256:64f8f9993138a338f7d0485b5a24fd0f96d240287e94f5c0fe411b822150df98"},
 ]
 
 [[package]]
 name = "npc-sessions"
-version = "0.0.104"
+version = "0.0.119"
 requires_python = ">=3.9"
 summary = "Tools and interfaces for working with behavior and epyhys sessions from the Mindscope Neuropixels team, in the cloud."
 dependencies = [
@@ -3104,7 +3103,7 @@ dependencies = [
     "SimpleITK>=2.2.1",
     "crc32c>=2.3.post0",
     "h5py>=3.9.0",
-    "hdmf-zarr>=0.3.0",
+    "hdmf-zarr>=0.4.0",
     "hdmf>=3.5.4",
     "ipykernel>=6.25.2",
     "ipympl>=0.9.3",
@@ -3113,7 +3112,7 @@ dependencies = [
     "matplotlib>=3.7.2",
     "nbconvert>=7.9.2",
     "ndx-events>=0.2.0",
-    "npc-lims>=0.1.81",
+    "npc-lims>=0.1.86",
     "npc-session>=0.1.26",
     "numba>=0.57.1",
     "opencv-python-headless>=4.8.0.76",
@@ -3126,13 +3125,14 @@ dependencies = [
     "s3fs>=2023.6.0",
     "scipy>=1.9.3",
     "spikeinterface>=0.98.2",
+    "traitlets<=5.9.0",
     "universal-pathlib>=0.1.1",
     "wavpack-numcodecs>=0.1.4",
     "zarr>=2.16.1",
 ]
 files = [
-    {file = "npc_sessions-0.0.104-py3-none-any.whl", hash = "sha256:ebb60184d4110d55169dacff7c65f8439a599b7a7c38344a75cb3523edf094e3"},
-    {file = "npc_sessions-0.0.104.tar.gz", hash = "sha256:5fea77526210f30ca67d3db6cb49d7c862559f82529d668a095b57755ae1d232"},
+    {file = "npc_sessions-0.0.119-py3-none-any.whl", hash = "sha256:093645b20fb1008a2d8bfade7c522c60c96238fd9e7fd2629953814c6bdca3ec"},
+    {file = "npc_sessions-0.0.119.tar.gz", hash = "sha256:03636001a67a87dcecf95bb100101ee754d2c8e5f180af3023d231f235b7720c"},
 ]
 
 [[package]]
