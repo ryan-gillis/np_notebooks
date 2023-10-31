@@ -1,0 +1,370 @@
+2023-10-31 15:42:43 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:43 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /get_script/ HTTP/1.1" 200 743
+2023-10-31 15:42:43 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:44 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/regimens?results_per_page=200&page=1 HTTP/1.1" 200 2312174
+2023-10-31 15:42:44 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:44 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/regimens?results_per_page=200&page=2 HTTP/1.1" 200 1700998
+2023-10-31 15:42:44 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:44 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/regimens?results_per_page=200&page=3 HTTP/1.1" 200 434848
+2023-10-31 15:42:44 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:44 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:44 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:44 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/regimens/248 HTTP/1.1" 200 8472
+2023-10-31 15:42:44 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:44 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:44 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:44 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/regimens/248 HTTP/1.1" 200 8472
+2023-10-31 15:42:44 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:44 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:44 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:44 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/regimens/248 HTTP/1.1" 200 8472
+2023-10-31 15:42:44 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/regimens/248 HTTP/1.1" 200 8472
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/regimens/248 HTTP/1.1" 200 8472
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/regimens/248 HTTP/1.1" 200 8472
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/regimens/248 HTTP/1.1" 200 8472
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/regimens/248 HTTP/1.1" 200 8472
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/regimens/248 HTTP/1.1" 200 8472
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/regimens/248 HTTP/1.1" 200 8472
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:42:45 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /api/v1/subjects/366122 HTTP/1.1" 200 110
+2023-10-31 15:56:38 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:86 __init__ MainThread | Ephys | Creating new session for mouse Mouse(366122), operator User('corbettb')
+2023-10-31 15:56:38 | np_session.databases.lims2 | DEBUG | lims2.py:36 requester MainThread | Requesting http://lims2/donors/info/details.json?external_donor_name=366122
+2023-10-31 15:56:38 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): lims2:80
+2023-10-31 15:56:39 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://lims2:80 "GET /donors/info/details.json?external_donor_name=366122 HTTP/1.1" 200 None
+2023-10-31 15:56:39 | np_session.databases.lims2 | DEBUG | lims2.py:36 requester MainThread | Requesting http://lims2/specimens/isi_experiment_details/366122.json
+2023-10-31 15:56:39 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): lims2:80
+2023-10-31 15:56:39 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://lims2:80 "GET /specimens/isi_experiment_details/366122.json HTTP/1.1" 200 None
+2023-10-31 15:56:39 | np_session.databases.lims2 | DEBUG | lims2.py:36 requester MainThread | Requesting http://lims2/users.json?login=corbettb
+2023-10-31 15:56:39 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): lims2:80
+2023-10-31 15:56:39 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://lims2:80 "GET /users.json?login=corbettb HTTP/1.1" 200 None
+2023-10-31 15:56:39 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): lims2:80
+2023-10-31 15:56:39 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://lims2:80 "POST /observatory/ecephys_session/create HTTP/1.1" 200 None
+2023-10-31 15:56:39 | np_session.databases.lims2 | DEBUG | lims2.py:36 requester MainThread | Requesting http://lims2/ecephys_sessions.json?id=1307801020
+2023-10-31 15:56:39 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): lims2:80
+2023-10-31 15:56:39 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://lims2:80 "GET /ecephys_sessions.json?id=1307801020 HTTP/1.1" 200 None
+2023-10-31 15:56:39 | np_session.databases.lims2 | DEBUG | lims2.py:36 requester MainThread | Requesting http://lims2/ecephys_sessions.json?id=1307801020
+2023-10-31 15:56:39 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): lims2:80
+2023-10-31 15:56:39 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://lims2:80 "GET /ecephys_sessions.json?id=1307801020 HTTP/1.1" 200 None
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:110 session MainThread | Set experiment.session to PipelineSession('1307801020_366122_20231031')
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring MouseDirector.comp = Mon
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring MouseDirector.port = 9000
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring MouseDirector.timeout = 10.0
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring MouseDirector.serialization = json
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring MouseDirector.rsc_app_id = mousedirector
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring Sync.comp = Sync
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring Sync.port = 5000
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring Sync.data = c$/ProgramData/AIBS_MPE/sync/data
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring Sync.gb_per_hr = 2.0
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring Sync.min_rec_hr = 3.0
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring Sync.serialization = pickle
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring Sync.rsc_app_id = sync_device
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring VideoMVR.comp = Mon
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring VideoMVR.port = 50000
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring VideoMVR.gb_per_hr = 2.0
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring VideoMVR.min_rec_hr = 3.0
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring VideoMVR.pretest_duration_sec = 5
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring VideoMVR.data = c$/ProgramData/AIBS_MPE/mvr/data
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring VideoMVR.timeout = 2.0
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring VideoMVR.rsc_app_id = MVR
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring ImageMVR.comp = Mon
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring ImageMVR.port = 50000
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring ImageMVR.gb_per_hr = 0.2
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring ImageMVR.min_rec_hr = 0.1
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring ImageMVR.data = c$/ProgramData/AIBS_MPE/mvr/data
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring ImageMVR.timeout = 2.0
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring ImageMVR.rsc_app_id = MVR
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring NewScaleCoordinateRecorder.comp = Mon
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring NewScaleCoordinateRecorder.data_root = c$/MPM_data
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring NewScaleCoordinateRecorder.data_name = log.csv
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring NewScaleCoordinateRecorder.log_time_fmt = %Y/%m/%d %H:%M:%S.%f
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring NewScaleCoordinateRecorder.max_z_travel = 6000
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring NewScaleCoordinateRecorder.data_fieldnames = ['last_moved', 'manipulator', 'x', 'y', 'z', 'x_virtual', 'y_virtual', 'z_virtual']
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring NewScaleCoordinateRecorder.data = c$/MPM_data
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring NewScaleCoordinateRecorder.rsc_app_id = newscale_motor
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring NewScaleCoordinateRecorder.probe_to_serial_number = {'A': 'SN45356', 'B': 'SN45484', 'C': 'SN45485', 'D': 'SN45359', 'E': 'SN45482', 'F': 'SN45361'}
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring SessionCamstim.comp = Stim
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring SessionCamstim.port = 5000
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring SessionCamstim.data = c$/ProgramData/AIBS_MPE/camstim/data
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring SessionCamstim.gb_per_hr = 0.2
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring SessionCamstim.min_rec_hr = 3.0
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring SessionCamstim.serialization = json
+2023-10-31 15:56:39 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring SessionCamstim.rsc_app_id = camstim_agent
+2023-10-31 15:56:39 | np_session.databases.lims2 | DEBUG | lims2.py:36 requester MainThread | Requesting http://lims2/ecephys_sessions.json?id=1307801020
+2023-10-31 15:56:39 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): lims2:80
+2023-10-31 15:56:39 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://lims2:80 "GET /ecephys_sessions.json?id=1307801020 HTTP/1.1" 200 None
+2023-10-31 15:56:39 | np_session.databases.lims2 | DEBUG | lims2.py:36 requester MainThread | Requesting http://lims2/ecephys_sessions.json?id=1307801020
+2023-10-31 15:56:39 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): lims2:80
+2023-10-31 15:56:39 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://lims2:80 "GET /ecephys_sessions.json?id=1307801020 HTTP/1.1" 200 None
+2023-10-31 15:56:39 | web | INFO | 727142384.py:183 new_experiment MainThread | Ephys(1307801020_366122_20231031) created
+2023-10-31 15:56:39 | np_session.databases.lims2 | DEBUG | lims2.py:36 requester MainThread | Requesting http://lims2/ecephys_sessions.json?id=1307801020
+2023-10-31 15:56:39 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): lims2:80
+2023-10-31 15:56:39 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://lims2:80 "GET /ecephys_sessions.json?id=1307801020 HTTP/1.1" 200 None
+2023-10-31 15:56:39 | np_session.components.platform_json | DEBUG | platform_json.py:93 __init__ MainThread | Creating new 1307801020_366122_20231031_platformD1.json
+2023-10-31 15:56:39 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:39 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155639
+2023-10-31 15:56:39 | np_session.components.platform_json | DEBUG | platform_json.py:148 write MainThread | PlatformJson wrote to //allen/programs/mindscope/workgroups/np-exp/1307801020_366122_20231031/1307801020_366122_20231031_platformD1.json
+2023-10-31 15:56:39 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155639
+2023-10-31 15:56:39 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:39 | np_session.components.platform_json | DEBUG | platform_json.py:270 update_from_session MainThread | Updating 1307801020_366122_20231031_platformD1.json with session 1307801020 fields, with write disabled
+2023-10-31 15:56:39 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155639
+2023-10-31 15:56:39 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:39 | np_session.components.platform_json | DEBUG | platform_json.py:257 update MainThread | Updating 1307801020_366122_20231031_platformD1.json operatorID:  -> corbettb
+2023-10-31 15:56:39 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.operatorID = corbettb
+2023-10-31 15:56:39 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155639
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:148 write MainThread | PlatformJson wrote to //allen/programs/mindscope/workgroups/np-exp/1307801020_366122_20231031/1307801020_366122_20231031_platformD1.json
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155639
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:257 update MainThread | Updating 1307801020_366122_20231031_platformD1.json sessionID:  -> 1307801020
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.sessionID = 1307801020
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:148 write MainThread | PlatformJson wrote to //allen/programs/mindscope/workgroups/np-exp/1307801020_366122_20231031/1307801020_366122_20231031_platformD1.json
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:257 update MainThread | Updating 1307801020_366122_20231031_platformD1.json mouseID:  -> 366122
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.mouseID = 366122
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:148 write MainThread | PlatformJson wrote to //allen/programs/mindscope/workgroups/np-exp/1307801020_366122_20231031/1307801020_366122_20231031_platformD1.json
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:40 | np_session.subclasses.pipeline | DEBUG | pipeline.py:481 start MainThread | Could not find experiment start time in //allen/programs/mindscope/workgroups/np-exp/1307801020_366122_20231031/1307801020_366122_20231031_platformD1.json: using start of day instead
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:40 | np_session.subclasses.pipeline | DEBUG | pipeline.py:505 end MainThread | Could not find experiment end time in //allen/programs/mindscope/workgroups/np-exp/1307801020_366122_20231031/1307801020_366122_20231031_platformD1.json: using end of day instead
+2023-10-31 15:56:40 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): mtrain:5000
+2023-10-31 15:56:40 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://mtrain:5000 "GET /get_behavior_sessions/ HTTP/1.1" 200 81411
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:257 update MainThread | Updating 1307801020_366122_20231031_platformD1.json project:  -> NeuropixelPlatformDevelopment
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.project = NeuropixelPlatformDevelopment
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:148 write MainThread | PlatformJson wrote to //allen/programs/mindscope/workgroups/np-exp/1307801020_366122_20231031/1307801020_366122_20231031_platformD1.json
+2023-10-31 15:56:40 | np_session.databases.lims2 | DEBUG | lims2.py:36 requester MainThread | Requesting http://lims2/ecephys_sessions.json?id=1307801020
+2023-10-31 15:56:40 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): lims2:80
+2023-10-31 15:56:40 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://lims2:80 "GET /ecephys_sessions.json?id=1307801020 HTTP/1.1" 200 None
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:257 update MainThread | Updating 1307801020_366122_20231031_platformD1.json hab: None -> False
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.hab = False
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:148 write MainThread | PlatformJson wrote to //allen/programs/mindscope/workgroups/np-exp/1307801020_366122_20231031/1307801020_366122_20231031_platformD1.json
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:148 write MainThread | PlatformJson wrote to //allen/programs/mindscope/workgroups/np-exp/1307801020_366122_20231031/1307801020_366122_20231031_platformD1.json
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.workflow_start_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:56:40 | np_session.components.platform_json | DEBUG | platform_json.py:148 write MainThread | PlatformJson wrote to //allen/programs/mindscope/workgroups/np-exp/1307801020_366122_20231031/1307801020_366122_20231031_platformD1.json
+2023-10-31 15:57:07 | np_session.databases.lims2 | DEBUG | lims2.py:36 requester MainThread | Requesting http://lims2/ecephys_sessions.json?id=1307801020
+2023-10-31 15:57:07 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): lims2:80
+2023-10-31 15:57:07 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://lims2:80 "GET /ecephys_sessions.json?id=1307801020 HTTP/1.1" 200 None
+2023-10-31 15:57:12 | np_session.databases.lims2 | DEBUG | lims2.py:36 requester MainThread | Requesting http://lims2/ecephys_sessions.json?id=1307801020
+2023-10-31 15:57:12 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): lims2:80
+2023-10-31 15:57:13 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://lims2:80 "GET /ecephys_sessions.json?id=1307801020 HTTP/1.1" 200 None
+2023-10-31 15:58:13 | np_session.databases.lims2 | DEBUG | lims2.py:36 requester MainThread | Requesting http://lims2/ecephys_sessions.json?id=1307801020
+2023-10-31 15:58:13 | urllib3.connectionpool | DEBUG | connectionpool.py:245 _new_conn MainThread | Starting new HTTP connection (1): lims2:80
+2023-10-31 15:58:13 | urllib3.connectionpool | DEBUG | connectionpool.py:473 _make_request MainThread | http://lims2:80 "GET /ecephys_sessions.json?id=1307801020 HTTP/1.1" 200 None
+2023-10-31 15:58:13 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:58:13 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:58:13 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.workflow_start_time = 20231031155640
+2023-10-31 15:58:13 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:58:13 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:58:13 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.workflow_start_time = 20231031155640
+2023-10-31 15:58:13 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_save_time = 20231031155640
+2023-10-31 15:58:13 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.platform_json_creation_time = 20231031155639
+2023-10-31 15:58:13 | np_session.components.platform_json | DEBUG | platform_json.py:133 __setattr__ MainThread | Updated 1307801020_366122_20231031_platformD1.json.workflow_start_time = 20231031155640
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring MouseDirector.comp = Mon
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring MouseDirector.port = 9000
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring MouseDirector.timeout = 10.0
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring MouseDirector.serialization = json
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring MouseDirector.rsc_app_id = mousedirector
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring Sync.comp = Sync
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring Sync.port = 5000
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring Sync.data = c$/ProgramData/AIBS_MPE/sync/data
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring Sync.gb_per_hr = 2.0
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring Sync.min_rec_hr = 3.0
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring Sync.serialization = pickle
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring Sync.rsc_app_id = sync_device
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring VideoMVR.comp = Mon
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring VideoMVR.port = 50000
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring VideoMVR.gb_per_hr = 2.0
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring VideoMVR.min_rec_hr = 3.0
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring VideoMVR.pretest_duration_sec = 5
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring VideoMVR.data = c$/ProgramData/AIBS_MPE/mvr/data
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring VideoMVR.timeout = 2.0
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring VideoMVR.rsc_app_id = MVR
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring ImageMVR.comp = Mon
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring ImageMVR.port = 50000
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring ImageMVR.gb_per_hr = 0.2
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring ImageMVR.min_rec_hr = 0.1
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring ImageMVR.data = c$/ProgramData/AIBS_MPE/mvr/data
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring ImageMVR.timeout = 2.0
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring ImageMVR.rsc_app_id = MVR
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring NewScaleCoordinateRecorder.comp = Mon
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring NewScaleCoordinateRecorder.data_root = c$/MPM_data
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring NewScaleCoordinateRecorder.data_name = log.csv
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring NewScaleCoordinateRecorder.log_time_fmt = %Y/%m/%d %H:%M:%S.%f
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring NewScaleCoordinateRecorder.max_z_travel = 6000
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring NewScaleCoordinateRecorder.data_fieldnames = ['last_moved', 'manipulator', 'x', 'y', 'z', 'x_virtual', 'y_virtual', 'z_virtual']
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring NewScaleCoordinateRecorder.data = c$/MPM_data
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring NewScaleCoordinateRecorder.rsc_app_id = newscale_motor
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring NewScaleCoordinateRecorder.probe_to_serial_number = {'A': 'SN45356', 'B': 'SN45484', 'C': 'SN45485', 'D': 'SN45359', 'E': 'SN45482', 'F': 'SN45361'}
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring SessionCamstim.comp = Stim
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring SessionCamstim.port = 5000
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring SessionCamstim.data = c$/ProgramData/AIBS_MPE/camstim/data
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring SessionCamstim.gb_per_hr = 0.2
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring SessionCamstim.min_rec_hr = 3.0
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring SessionCamstim.serialization = json
+2023-10-31 15:58:13 | np_workflows.shared.base_experiments | DEBUG | base_experiments.py:172 apply_config MainThread | Ephys | Configuring SessionCamstim.rsc_app_id = camstim_agent
+2023-10-31 15:58:13 | np_services.proxies | DEBUG | proxies.py:736 initialize MainThread | MouseDirector | Initializing
+2023-10-31 15:58:13 | np_services.utils | INFO | utils.py:48 start_rsc_app MainThread | mousedirector is running on W10DT714046
+2023-10-31 15:58:13 | np_services.proxies | DEBUG | proxies.py:166 get_proxy MainThread | Creating MouseDirector proxy to W10DT714046:9000
+2023-10-31 15:58:13 | np_services.proxies | INFO | proxies.py:140 initialize MainThread | Proxy(MouseDirector) initialized: ready for use
+2023-10-31 15:58:17 | np_services.proxies | DEBUG | proxies.py:742 initialize MainThread | MouseDirector | Initialized with mouse 366122, user corbettb
+2023-10-31 15:58:17 | np_services.proxies | DEBUG | proxies.py:145 test MainThread | Testing MouseDirector proxy
+2023-10-31 15:58:18 | np_services.proxies | DEBUG | proxies.py:150 test MainThread | MouseDirector proxy connection to W10DT714046:9000 confirmed
+2023-10-31 15:58:18 | np_services.proxies | DEBUG | proxies.py:158 test MainThread | Proxy(MouseDirector) tested successfully
+2023-10-31 15:58:18 | np_services.utils | INFO | utils.py:48 start_rsc_app MainThread | sync_device is running on W10DTSM18307
+2023-10-31 15:58:18 | np_services.proxies | DEBUG | proxies.py:166 get_proxy MainThread | Creating Sync proxy to W10DTSM18307:5000
+2023-10-31 15:58:18 | np_services.proxies | INFO | proxies.py:140 initialize MainThread | Proxy(Sync) initialized: ready for use
+2023-10-31 15:58:18 | np_services.proxies | DEBUG | proxies.py:145 test MainThread | Testing Sync proxy
+2023-10-31 15:58:19 | np_services.proxies | DEBUG | proxies.py:174 get_state MainThread | Sync state: ('READY', '')
+2023-10-31 15:58:19 | np_services.proxies | DEBUG | proxies.py:150 test MainThread | Sync proxy connection to W10DTSM18307:5000 confirmed
+2023-10-31 15:58:19 | np_services.proxies | DEBUG | proxies.py:158 test MainThread | Proxy(Sync) tested successfully
+2023-10-31 15:58:19 | np_services.proxies | ERROR | proxies.py:104 ensure_config MainThread | Error accessing VideoMVR data path: \\W10DT714046\c$\ProgramData\AIBS_MPE\mvr\data
+Traceback (most recent call last):
+  File "c:\Users\ben.hardcastle\github\np_workflows\.venv\Lib\site-packages\np_services\proxies.py", line 101, in ensure_config
+    _ = root.exists()
+        ^^^^^^^^^^^^^
+  File "C:\Users\ben.hardcastle\.pyenv\pyenv-win\versions\3.11.3\Lib\pathlib.py", line 1235, in exists
+    self.stat()
+  File "C:\Users\ben.hardcastle\.pyenv\pyenv-win\versions\3.11.3\Lib\pathlib.py", line 1013, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: '\\\\W10DT714046\\c$\\ProgramData\\AIBS_MPE\\mvr\\data'
