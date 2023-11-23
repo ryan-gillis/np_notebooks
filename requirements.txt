@@ -142,11 +142,11 @@ np-config==0.4.25
 np-datajoint==0.0.6
 np-jobs==0.0.6
 np-logging==0.5.1
-np-probe-targets==0.0.12
+np-probe-targets==0.0.13
 np-services==0.1.53
 np-session==0.6.38
 np-tools==0.1.20
-np-workflows==1.6.49
+np-workflows==1.6.50
 npc-lims==0.1.87
 npc-session==0.1.30
 npc-sessions==0.0.119
