@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform"]
 lock_version = "4.4.1"
-content_hash = "sha256:05ce7608893448845f08d1fa7ad9a59f856be8d8617c0a3b97f19b789ea953aa"
+content_hash = "sha256:6def8ba565bf1ad4fa30d12493ad69ac506e7ccee5ef5636afbeb4da469f845c"
 
 [[package]]
 name = "adbc-driver-manager"
@@ -3046,7 +3046,7 @@ files = [
 
 [[package]]
 name = "npc-lims"
-version = "0.1.87"
+version = "0.1.92"
 requires_python = ">=3.9"
 summary = "Tools to fetch and update paths, metadata and state for Mindscope Neuropixels sessions, in the cloud."
 dependencies = [
@@ -3063,8 +3063,8 @@ dependencies = [
     "universal-pathlib>=0.1.1",
 ]
 files = [
-    {file = "npc_lims-0.1.87-py3-none-any.whl", hash = "sha256:48d59cd87c4c656cb2a6692e9726e64a34039b0e1596d1d6410d9eef36ad3b49"},
-    {file = "npc_lims-0.1.87.tar.gz", hash = "sha256:8575bc2e78f5bfcb3fd7985b57b8277f0514b83805e11cb913744b2f868adcbb"},
+    {file = "npc_lims-0.1.92-py3-none-any.whl", hash = "sha256:74e2ab54881a7ade5eaf5f1b840a113c4b3bb267700ab9ddfeb07032c24593e6"},
+    {file = "npc_lims-0.1.92.tar.gz", hash = "sha256:980ce141f8567f091cb1aaefd3f136c79b6d858d718211fd3dcfddca4e93d4bc"},
 ]
 
 [[package]]
@@ -3082,7 +3082,7 @@ files = [
 
 [[package]]
 name = "npc-sessions"
-version = "0.0.119"
+version = "0.0.146"
 requires_python = ">=3.9"
 summary = "Tools and interfaces for working with behavior and epyhys sessions from the Mindscope Neuropixels team, in the cloud."
 dependencies = [
@@ -3099,7 +3099,7 @@ dependencies = [
     "matplotlib>=3.7.2",
     "nbconvert>=7.9.2",
     "ndx-events>=0.2.0",
-    "npc-lims>=0.1.86",
+    "npc-lims>=0.1.92",
     "npc-session>=0.1.26",
     "numba>=0.57.1",
     "opencv-python-headless>=4.8.0.76",
@@ -3118,8 +3118,8 @@ dependencies = [
     "zarr>=2.16.1",
 ]
 files = [
-    {file = "npc_sessions-0.0.119-py3-none-any.whl", hash = "sha256:093645b20fb1008a2d8bfade7c522c60c96238fd9e7fd2629953814c6bdca3ec"},
-    {file = "npc_sessions-0.0.119.tar.gz", hash = "sha256:03636001a67a87dcecf95bb100101ee754d2c8e5f180af3023d231f235b7720c"},
+    {file = "npc_sessions-0.0.146-py3-none-any.whl", hash = "sha256:bafbb2d3dab0e1d745f7feb9fb1156a3ecdf92141798adcb8ad901d912379935"},
+    {file = "npc_sessions-0.0.146.tar.gz", hash = "sha256:7ab9ea4da621692aa8172aa09bc64a42efffce5adcd159b06203908bfd04f4d9"},
 ]
 
 [[package]]
