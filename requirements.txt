@@ -120,10 +120,10 @@ notebook-shim==0.2.3
 np-config==0.4.25
 np-jobs==0.0.6
 np-logging==0.5.1
-np-services==0.1.59
+np-services==0.1.60
 np-session==0.6.40
 np-tools==0.1.20
-np-workflows==1.6.58
+np-workflows==1.6.59
 npc-ephys==0.1.8
 npc-io==0.1.23
 npc-lims==0.1.116
