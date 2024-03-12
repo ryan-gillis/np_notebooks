@@ -4,5 +4,5 @@ authors = [
     { name = "bjhardcastle", email = "ben.hardcastle@alleninstitute.org" },
 ]
 requires-python = ">=3.11, <3.12"
-dependencies = ["jupyterlab>=3.6", "np-workflows>=1.6.59"]
+dependencies = ["jupyterlab>=3.6", "np-workflows>=1.6.62"]
 
