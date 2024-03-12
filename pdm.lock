@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform"]
 lock_version = "4.4.1"
-content_hash = "sha256:24e87aad9eeecb17811bc4a02623ba209ef7edea69bb2a5f5621d0050a6bf7e3"
+content_hash = "sha256:54317f6eec8f019ea333f6fee8311faf487375225b9963c44333917847aa192f"
 
 [[package]]
 name = "aind-codeocean-api"
@@ -188,15 +188,6 @@ dependencies = [
 files = [
     {file = "anyio-3.7.1-py3-none-any.whl", hash = "sha256:91dee416e570e92c64041bd18b900d1d6fa78dff7048769ce5ac5ddad004fbb5"},
     {file = "anyio-3.7.1.tar.gz", hash = "sha256:44a3c9aba0f5defa43261a8b3efb97891f2bd7d804e0e1f56419befa1adfc780"},
-]
-
-[[package]]
-name = "appdirs"
-version = "1.4.4"
-summary = "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
-files = [
-    {file = "appdirs-1.4.4-py2.py3-none-any.whl", hash = "sha256:a841dacd6b99318a741b166adb07e19ee71a274450e68237b4650ca1055ab128"},
-    {file = "appdirs-1.4.4.tar.gz", hash = "sha256:7d5d0167b2b1ba821647616af46a749d1c653740dd0d2415100fe26e27afdf41"},
 ]
 
 [[package]]
@@ -403,34 +394,24 @@ files = [
 
 [[package]]
 name = "blosc2"
-version = "2.0.0"
-requires_python = ">=3.8, <4"
-summary = "Python wrapper for the C-Blosc2 library."
+version = "2.5.1"
+requires_python = "<4,>=3.8"
+summary = "Python wrapper for the C-Blosc2 library"
 dependencies = [
     "msgpack",
+    "ndindex>=1.4",
+    "numpy>=1.20.3",
+    "py-cpuinfo",
 ]
 files = [
-    {file = "blosc2-2.0.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:4085e5c1df186e1747d8a8578b0cc1c8b7668391d635e9f89e17156912fba85a"},
-    {file = "blosc2-2.0.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:cec4c0570543921ce6b8c9ffdbf9f2170de37ecaf8e2b213e867e3130b81f205"},
-    {file = "blosc2-2.0.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:1fbecd7ef4876811719aa58d84e4b414f430f329162c18578b870f5e77b59864"},
-    {file = "blosc2-2.0.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:96dd63eb7641594208e6a865fd60a0bdde24568a180180beb8af4d6608796f3a"},
-    {file = "blosc2-2.0.0-cp310-cp310-win_amd64.whl", hash = "sha256:659e18d5e606a0ca4d80766f86d87e640818051911d01679eed11022243a7e4f"},
-    {file = "blosc2-2.0.0-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:c58990ab2bcd0f412496acf1d05c65d955d963197bbaa57b10b2ace31c29181a"},
-    {file = "blosc2-2.0.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:f206e6a01a8167b441bf886ff022eb20e0f085b09300f49f3018f566c14d918a"},
-    {file = "blosc2-2.0.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:0ec63269428aa3fb45f7d4881b2d11b428c4cb62e854caf54a767a64da4df83e"},
-    {file = "blosc2-2.0.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:98ab1cd57f9d7422f1636a6b290f2940113ee8be26bfe3823e8c011826972b9c"},
-    {file = "blosc2-2.0.0-cp311-cp311-win_amd64.whl", hash = "sha256:54c5614b18f9f01473758fa64e3bc699adbe31b307a45eca0e07fa2204e4d4a1"},
-    {file = "blosc2-2.0.0-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:f465b8ab54ecde6b8654672a50a4c3699aafd8e2de0dfcd84ed53f8a34c1734a"},
-    {file = "blosc2-2.0.0-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:0497793f55db0b75de08eb4c047a0bc5b96dbe5e405b53803dd3368e36336188"},
-    {file = "blosc2-2.0.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:c5c52649837d514669107c77e8f172e9e5ecfa030eef0d378bb47ce1689921c9"},
-    {file = "blosc2-2.0.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8eb02f67d4ed8ac8f0ce5f3c8cafc0059255bb6899fd35127e4076925640f239"},
-    {file = "blosc2-2.0.0-cp38-cp38-win_amd64.whl", hash = "sha256:32c365bf744353103ed91dc1f03889de03b986588181601594aa7ee773818cb4"},
-    {file = "blosc2-2.0.0-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:d98e850f0de55e15c402c6e27105ba850f8954e784e30a7f8bde89eb70a08574"},
-    {file = "blosc2-2.0.0-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:6545d6d7e7365a2a3533d4bdf7095856443aed7d5ddc577ecd0e78083790bff1"},
-    {file = "blosc2-2.0.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:5c193959a984e7814833c8be6b9026d7744d2cff4d450476561583a87152e13e"},
-    {file = "blosc2-2.0.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ea3396de7757092d502fb297a44a8d019d92e750e5aebcd9d39a157fde8785b3"},
-    {file = "blosc2-2.0.0-cp39-cp39-win_amd64.whl", hash = "sha256:ef018926b55799cf23345127dde8f29356b4451b3e067e1b07f0d186213bd821"},
-    {file = "blosc2-2.0.0.tar.gz", hash = "sha256:f19b0b3674f6c825b490f00d8264b0c540c2cdc11ec7e81178d38b83c57790a1"},
+    {file = "blosc2-2.5.1-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:da826d42d616f8a939f27e1501b40e764fded66bc80177eeaefcebdbf3b3afb8"},
+    {file = "blosc2-2.5.1-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:ae2e0c5dc8561a6b17842ee4320b49621434c20e622c9e9f5c67c9c6eb3b06a3"},
+    {file = "blosc2-2.5.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:af3cab9c12a4364c643266ee7d9583b526c0f484a291d72ec6efb09ea7ffbbf9"},
+    {file = "blosc2-2.5.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:22f03a723130cf07e4309fe34b1360c868f4376e862f8ff664eb40d019fdd3f6"},
+    {file = "blosc2-2.5.1-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:0fd109eef815ea1e50fde4f676388aa2f3bb5543502d125fb63f16ec7a014464"},
+    {file = "blosc2-2.5.1-cp311-cp311-win32.whl", hash = "sha256:1a3edc3256bad04d3db30c9de7eac3a820f96e741fc754cdabb6a9991e5c37e8"},
+    {file = "blosc2-2.5.1-cp311-cp311-win_amd64.whl", hash = "sha256:e7499e277c13334d54f84e74f429f32341f99f7b978deaf9a7c2e963904cb48c"},
+    {file = "blosc2-2.5.1.tar.gz", hash = "sha256:47d5df50e7286edf81e629ece35f87f13f55c13c5e8545832188c420c75d1659"},
 ]
 
 [[package]]
@@ -857,55 +838,6 @@ files = [
 ]
 
 [[package]]
-name = "cython"
-version = "0.29.36"
-requires_python = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
-summary = "The Cython compiler for writing C extensions for the Python language."
-files = [
-    {file = "Cython-0.29.36-cp27-cp27m-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:1ea33c1c57f331f5653baa1313e445fbe80d1da56dd9a42c8611037887897b9d"},
-    {file = "Cython-0.29.36-cp27-cp27m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:2fe34615c13ace29e77bf9d21c26188d23eff7ad8b3e248da70404e5f5436b95"},
-    {file = "Cython-0.29.36-cp27-cp27mu-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:ae75eac4f13cbbcb50b2097470dcea570182446a3ebd0f7e95dd425c2017a2d7"},
-    {file = "Cython-0.29.36-cp27-cp27mu-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:847d07fc02978c4433d01b4f5ee489b75fd42fd32ccf9cc4b5fd887e8cffe822"},
-    {file = "Cython-0.29.36-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.manylinux_2_24_aarch64.whl", hash = "sha256:7cb44aeaf6c5c25bd6a7562ece4eadf50d606fc9b5f624fa95bd0281e8bf0a97"},
-    {file = "Cython-0.29.36-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl", hash = "sha256:28fb10aabd56a2e4d399273b48e106abe5a0d271728fd5eed3d36e7171000045"},
-    {file = "Cython-0.29.36-cp310-cp310-manylinux_2_5_i686.manylinux1_i686.manylinux_2_24_i686.whl", hash = "sha256:86b7a13c6b23ab6471d40a320f573fbc8a4e39833947eebed96661145dc34771"},
-    {file = "Cython-0.29.36-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:19ccf7fc527cf556e2e6a3dfeffcadfbcabd24a59a988289117795dfed8a25ad"},
-    {file = "Cython-0.29.36-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.manylinux_2_24_aarch64.whl", hash = "sha256:74bddfc7dc8958526b2018d3adc1aa6dc9cf2a24095c972e5ad06758c360b261"},
-    {file = "Cython-0.29.36-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl", hash = "sha256:6c4d7e36fe0211e394adffd296382b435ac22762d14f2fe45c506c230f91cf2d"},
-    {file = "Cython-0.29.36-cp311-cp311-manylinux_2_5_i686.manylinux1_i686.manylinux_2_24_i686.whl", hash = "sha256:0bca6a7504e8cfc63a4d3c7c9b9a04e5d05501942a6c8cee177363b61a32c2d4"},
-    {file = "Cython-0.29.36-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:17c74f80b06e2fa8ffc8acd41925f4f9922da8a219cd25c6901beab2f7c56cc5"},
-    {file = "Cython-0.29.36-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:25ff471a459aad82146973b0b8c177175ab896051080713d3035ad4418739f66"},
-    {file = "Cython-0.29.36-cp35-cp35m-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:a9738f23d00d99481797b155ad58f8fc1c72096926ea2554b8ccc46e1d356c27"},
-    {file = "Cython-0.29.36-cp35-cp35m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:af2f333f08c4c279f3480532341bf70ec8010bcbc7d8a6daa5ca0bf4513af295"},
-    {file = "Cython-0.29.36-cp36-cp36m-manylinux_2_17_aarch64.manylinux2014_aarch64.manylinux_2_24_aarch64.whl", hash = "sha256:cd77cedbcc13cb67aef39b8615fd50a67fc42b0c6defea6fc0a21e19d3a062ec"},
-    {file = "Cython-0.29.36-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl", hash = "sha256:50d506d73a46c4a522ef9fdafcbf7a827ba13907b18ff58f61a8fa0887d0bd8d"},
-    {file = "Cython-0.29.36-cp36-cp36m-manylinux_2_5_i686.manylinux1_i686.manylinux_2_24_i686.whl", hash = "sha256:6a571d7c7b52ee12d73bc65b4855779c069545da3bac26bec06a1389ad17ade5"},
-    {file = "Cython-0.29.36-cp36-cp36m-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:a216b2801c7d9c3babe0a10cc25da3bc92494d7047d1f732d3c47b0cceaf0941"},
-    {file = "Cython-0.29.36-cp36-cp36m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:68abee3be27f21c9642a07a93f8333d491f4c52bc70068e42f51685df9ac1a57"},
-    {file = "Cython-0.29.36-cp36-cp36m-musllinux_1_1_x86_64.whl", hash = "sha256:1ef90023da8a9bf84cf16f06186db0906d2ce52a09f751e2cb9d3da9d54eae46"},
-    {file = "Cython-0.29.36-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.manylinux_2_24_aarch64.whl", hash = "sha256:9deef0761e8c798043dbb728a1c6df97b26e5edc65b8d6c7608b3c07af3eb722"},
-    {file = "Cython-0.29.36-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl", hash = "sha256:69af2365de2343b4e5a61c567e7611ddf2575ae6f6e5c01968f7d4f2747324eb"},
-    {file = "Cython-0.29.36-cp37-cp37m-manylinux_2_5_i686.manylinux1_i686.manylinux_2_24_i686.whl", hash = "sha256:fdf377b0f6e9325b73ad88933136023184afdc795caeeaaf3dca13494cffd15e"},
-    {file = "Cython-0.29.36-cp37-cp37m-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:1ff2cc5518558c598028ae8d9a43401e0e734b74b6e598156b005328c9da3472"},
-    {file = "Cython-0.29.36-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:7ca921068242cd8b52544870c807fe285c1f248b12df7b6dfae25cc9957b965e"},
-    {file = "Cython-0.29.36-cp37-cp37m-musllinux_1_1_x86_64.whl", hash = "sha256:6058a6d04e04d790cda530e1ff675e9352359eb4b777920df3cac2b62a9a030f"},
-    {file = "Cython-0.29.36-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.manylinux_2_24_aarch64.whl", hash = "sha256:de2045ceae1857e56a72f08e0acfa48c994277a353b7bdab1f097db9f8803f19"},
-    {file = "Cython-0.29.36-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl", hash = "sha256:9f2a4b4587aaef08815410dc20653613ca04a120a2954a92c39e37c6b5fdf6be"},
-    {file = "Cython-0.29.36-cp38-cp38-manylinux_2_5_i686.manylinux1_i686.manylinux_2_24_i686.whl", hash = "sha256:2edd9f8edca69178d74cbbbc180bc3e848433c9b7dc80374a11a0bb0076c926d"},
-    {file = "Cython-0.29.36-cp38-cp38-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:c6c0aea8491a70f98b7496b5057c9523740e02cec21cd678eef609d2aa6c1257"},
-    {file = "Cython-0.29.36-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:768f65b16d23c630d8829ce1f95520ef1531a9c0489fa872d87c8c3813f65aee"},
-    {file = "Cython-0.29.36-cp38-cp38-musllinux_1_1_x86_64.whl", hash = "sha256:568625e8274ee7288ad87b0f615ec36ab446ca9b35e77481ed010027d99c7020"},
-    {file = "Cython-0.29.36-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.manylinux_2_24_aarch64.whl", hash = "sha256:bdc0a4cb99f55e6878d4b67a4bfee23823484915cb6b7e9c9dd01002dd3592ea"},
-    {file = "Cython-0.29.36-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl", hash = "sha256:f0df6552be39853b10dfb5a10dbd08f5c49023d6b390d7ce92d4792a8b6e73ee"},
-    {file = "Cython-0.29.36-cp39-cp39-manylinux_2_5_i686.manylinux1_i686.manylinux_2_24_i686.whl", hash = "sha256:8894db6f5b6479a3c164e0454e13083ebffeaa9a0822668bb2319bdf1b783df1"},
-    {file = "Cython-0.29.36-cp39-cp39-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:53f93a8c342e9445a8f0cb7039775294f2dbbe5241936573daeaf0afe30397e4"},
-    {file = "Cython-0.29.36-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:ee317f9bcab901a3db39c34ee5a27716f7132e5c0de150125342694d18b30f51"},
-    {file = "Cython-0.29.36-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:e4b8269e5a5d127a2191b02b9df3636c0dac73f14f1ff8a831f39cb5197c4f38"},
-    {file = "Cython-0.29.36-py2.py3-none-any.whl", hash = "sha256:95bb13d8be507425d03ebe051f90d4b2a9fdccc64e4f30b35645fdb7542742eb"},
-    {file = "Cython-0.29.36.tar.gz", hash = "sha256:41c0cfd2d754e383c9eeb95effc9aa4ab847d0c9747077ddd7c0dcb68c3bc01f"},
-]
-
-[[package]]
 name = "debugpy"
 version = "1.6.7"
 requires_python = ">=3.7"
@@ -966,7 +898,7 @@ files = [
 
 [[package]]
 name = "dynamicroutingtask"
-version = "0.1.24"
+version = "0.1.92"
 requires_python = ">=3.9"
 summary = ""
 dependencies = [
@@ -977,8 +909,8 @@ dependencies = [
     "scipy",
 ]
 files = [
-    {file = "DynamicRoutingTask-0.1.24-py3-none-any.whl", hash = "sha256:5e2da2eb8b70da6402f7f2ad356b1e8d16b4b5cf0e580efd003584938bb91571"},
-    {file = "DynamicRoutingTask-0.1.24.tar.gz", hash = "sha256:e1ba4c1877880f43ea1ca720338cef58ecac77a82bb41d098ee57bff94e84b8d"},
+    {file = "DynamicRoutingTask-0.1.92-py3-none-any.whl", hash = "sha256:79e767b6a983f196926dc286d207ee260bb0741581ed3940a8401002828238ef"},
+    {file = "DynamicRoutingTask-0.1.92.tar.gz", hash = "sha256:13ad63e784b7b85b4b2a4ead65eb714af5ace14ba7c0e00fb8eb38e9e6578f6d"},
 ]
 
 [[package]]
@@ -2440,6 +2372,16 @@ files = [
 ]
 
 [[package]]
+name = "ndindex"
+version = "1.8"
+requires_python = ">=3.8"
+summary = "A Python library for manipulating indices of ndarrays."
+files = [
+    {file = "ndindex-1.8-py3-none-any.whl", hash = "sha256:b5132cd331f3e4106913ed1a974a3e355967a5991543c2f512b40cb8bb9f50b8"},
+    {file = "ndindex-1.8.tar.gz", hash = "sha256:5fc87ebc784605f01dd5367374cb40e8da8f2c30988968990066c5098a7eebe8"},
+]
+
+[[package]]
 name = "ndx-events"
 version = "0.2.0"
 summary = "NWB extension for storing timestamped event and TTL pulse data"
@@ -2449,6 +2391,19 @@ dependencies = [
 files = [
     {file = "ndx-events-0.2.0.tar.gz", hash = "sha256:25eceed121a9b889b35e7d32dba8c7c3d53ae22c28757942643ace970344c25b"},
     {file = "ndx_events-0.2.0-py2.py3-none-any.whl", hash = "sha256:9db80ab09b11979c1678d948f6a7cb7ee2833f3d743e660391b731f6c15320af"},
+]
+
+[[package]]
+name = "ndx-pose"
+version = "0.1.1"
+summary = "NWB extension to store pose estimation data"
+dependencies = [
+    "hdmf<4,>=2.5.6",
+    "pynwb<3,>=1.5.0",
+]
+files = [
+    {file = "ndx-pose-0.1.1.tar.gz", hash = "sha256:167dc25f13ba1abc924543cbe44123703303b3f61e5baf6108334a3fe6def11c"},
+    {file = "ndx_pose-0.1.1-py2.py3-none-any.whl", hash = "sha256:229718b494bf34f2e7f73d6e185b074a46169420b57e8573944a14b280b0a472"},
 ]
 
 [[package]]
@@ -2491,13 +2446,13 @@ files = [
 
 [[package]]
 name = "np-config"
-version = "0.4.25"
+version = "0.4.26"
 requires_python = ">=3.7,<4.0"
 summary = "Config fetching from file or Zookeeper - with local backup - repackaging code from AIBS mpeconfig."
 dependencies = [
-    "appdirs<2,>=1",
     "backports-cached-property",
     "kazoo<2.9,>=2.8",
+    "platformdirs<4.0.0,>=3.11.0",
     "pyyaml<7,>=5",
     "requests<3,>=2",
     "singledispatch<5.0.0,>=4.0.0",
@@ -2505,8 +2460,8 @@ dependencies = [
     "typing-extensions>=4",
 ]
 files = [
-    {file = "np_config-0.4.25-py3-none-any.whl", hash = "sha256:bb8c1f8ac0aed82b5907de08e26ccff2a3dfe3e9ad4b4f3b5bbccab59d477c01"},
-    {file = "np_config-0.4.25.tar.gz", hash = "sha256:a9466f80357b5887d48e37b3493365b07bf2bd523de39442aae3d75012280da8"},
+    {file = "np_config-0.4.26-py3-none-any.whl", hash = "sha256:1fd65608dfa0afbccab34c6236efd8fd82dc0887623f6ed6f964a899b56ffac2"},
+    {file = "np_config-0.4.26.tar.gz", hash = "sha256:fe3e2c3a3675598faa33c63577bc1baf626a2bbe9a84bc78dac447ba90912d10"},
 ]
 
 [[package]]
@@ -2541,7 +2496,7 @@ files = [
 
 [[package]]
 name = "np-services"
-version = "0.1.60"
+version = "0.1.63"
 requires_python = "<4.0,>=3.11"
 summary = "Tools for interfacing with devices and services used in Mindscope Neuropixels experiments at the Allen Institute."
 dependencies = [
@@ -2551,7 +2506,7 @@ dependencies = [
     "np-session>=0.6.40",
     "npc-ephys>=0.1.7",
     "npc-mvr>=0.1.2",
-    "npc-stim>=0.1.4",
+    "npc-stim>=0.1.5",
     "npc-sync>=0.1.6",
     "pandas>=2.0",
     "pyzmq",
@@ -2559,8 +2514,8 @@ dependencies = [
     "tables<4.0.0,>=3.8.0",
 ]
 files = [
-    {file = "np_services-0.1.60-py3-none-any.whl", hash = "sha256:673112b2239584cceb5c2fa33789bbcb0c3000fd5224e200328038a48dc6a62b"},
-    {file = "np_services-0.1.60.tar.gz", hash = "sha256:5a1bfa51237d31a5e34ba8f44b60e4f0ca083f9197042f0b509db46053908ad4"},
+    {file = "np_services-0.1.63-py3-none-any.whl", hash = "sha256:1c63467642136561f7e2c15c722a5a42830cb9e2a35a675d935461f52b5e2db3"},
+    {file = "np_services-0.1.63.tar.gz", hash = "sha256:1cb7961379bfde04efafbc38cbbffc39463459a1b539badd872bffdaa67be759"},
 ]
 
 [[package]]
@@ -2606,32 +2561,32 @@ files = [
 
 [[package]]
 name = "np-workflows"
-version = "1.6.59"
+version = "1.6.62"
 requires_python = "==3.11.*"
 summary = "Ecephys and behavior workflows for the Mindscope Neuropixels team."
 dependencies = [
     "ipylab>=0.6.0",
     "ipywidgets>=7",
     "jupyterlab>=3.6",
-    "np-config>=0.4.20",
+    "np-config>=0.4.26",
     "np-jobs>=0.0.3",
-    "np-services>=0.1.60",
+    "np-services>=0.1.63",
     "np-session>=0.6.40",
     "np-tools>=0.1.14",
-    "npc-sessions>=0.0.176",
+    "npc-sessions>=0.0.201",
     "npc-shields>=0.1.4",
     "pydantic>=2",
     "s3fs>=2023.6.0",
     "universal-pathlib>=0.1.0",
 ]
 files = [
-    {file = "np_workflows-1.6.59-py3-none-any.whl", hash = "sha256:d27930b3e75f69981382bc81cd439639bee389dc7092fc21afde2b0162844dbc"},
-    {file = "np_workflows-1.6.59.tar.gz", hash = "sha256:74be0ae1e17cf594608fe960af6ffd17c3634d6015b98995ac4ff7762ac40f17"},
+    {file = "np_workflows-1.6.62-py3-none-any.whl", hash = "sha256:4ae8e29c0a22e0d27fea5a141a77a79c7b09732a4fc411513bb1e90e55e4704b"},
+    {file = "np_workflows-1.6.62.tar.gz", hash = "sha256:b94b44b91fb871134f57379e802d50d016a78029c2e8b7e4e10f2971e63daa1f"},
 ]
 
 [[package]]
 name = "npc-ephys"
-version = "0.1.8"
+version = "0.1.10"
 requires_python = ">=3.9"
 summary = "Tools for accessing and processing raw ephys data, compatible with data in the cloud."
 dependencies = [
@@ -2644,13 +2599,13 @@ dependencies = [
     "zarr>=2.16.1",
 ]
 files = [
-    {file = "npc-ephys-0.1.8.tar.gz", hash = "sha256:6f89756729adba9e1746dd620d4d7649ff256241a89ef85a6c1556192f58259d"},
-    {file = "npc_ephys-0.1.8-py3-none-any.whl", hash = "sha256:045c4f10142ea7636226b12fa9db8534860d6d1491b5169290b2e52cb72bc2dc"},
+    {file = "npc-ephys-0.1.10.tar.gz", hash = "sha256:c3ceb35b14db39db321d4bf79a0292e23ecdab3e7796a07d479c64826106c5e7"},
+    {file = "npc_ephys-0.1.10-py3-none-any.whl", hash = "sha256:e6c726c7d18c19e25d1d785c8e4e6a86f0364983a4610c7a582206805d488a6e"},
 ]
 
 [[package]]
 name = "npc-io"
-version = "0.1.23"
+version = "0.1.24"
 requires_python = ">=3.9"
 summary = "File IO tools for MindScope Neuropixels projects in the cloud."
 dependencies = [
@@ -2659,38 +2614,34 @@ dependencies = [
     "python-dotenv>=1.0.1",
     "s3fs>=2023.12.2",
     "typing-extensions>=4.9.0",
-    "universal-pathlib>=0.1.4",
+    "universal-pathlib<0.2.0",
 ]
 files = [
-    {file = "npc-io-0.1.23.tar.gz", hash = "sha256:197e1e39a069ca322151fd790300ffc1b3138b04a0b6a9705b8fc2940dd730fe"},
-    {file = "npc_io-0.1.23-py3-none-any.whl", hash = "sha256:e677006b14180dee966fa91c51ea41201aa29a2ec1a4b6e69247a2107607e776"},
+    {file = "npc-io-0.1.24.tar.gz", hash = "sha256:0fb08f8a69eb82df217e56ec4603b081b661824f47962a42247b0ad82c788d2e"},
+    {file = "npc_io-0.1.24-py3-none-any.whl", hash = "sha256:56d4adf1c934097d96396fc32646a2b566be0f6448f33972463fa99793a00e1c"},
 ]
 
 [[package]]
 name = "npc-lims"
-version = "0.1.116"
+version = "0.1.134"
 requires_python = ">=3.9"
 summary = "Tools to fetch and update paths, metadata and state for Mindscope Neuropixels sessions, in the cloud."
 dependencies = [
     "aind-codeocean-api>=0.4.0",
-    "boto3==1.28.17",
+    "npc-io>=0.1.24",
     "npc-session>=0.1.30",
     "openpyxl>=3.1.2",
     "packaging>=23.2",
     "pydbhub-bjh>=0.0.8",
     "pyopenssl>=23.2.0",
-    "python-dotenv>=1.0.0",
     "pyyaml>=6.0.1",
     "redis>=4.1.4",
-    "s3fs>=2023.6.0",
     "types-pyYAML>=6.0.12.12",
     "types-requests>=2.31.0.6",
-    "typing-extensions>=4.7.1",
-    "universal-pathlib>=0.1.1",
 ]
 files = [
-    {file = "npc_lims-0.1.116-py3-none-any.whl", hash = "sha256:09906236e8102a302f0a3917485757f9a149b84a4f07c29b502327176efb8484"},
-    {file = "npc_lims-0.1.116.tar.gz", hash = "sha256:c086142afff070ca37290622899d45425a5d900eabe01d627b8c14177198e7e1"},
+    {file = "npc_lims-0.1.134-py3-none-any.whl", hash = "sha256:ad4cb67c6a8cde3c9ca1140953e4681599e8250353848ade0bd6d445f703a8d5"},
+    {file = "npc_lims-0.1.134.tar.gz", hash = "sha256:bfc8bc0db5d6436b3060b4fabb4d68479ce67f30ae0838a3cc9364cd38fb165b"},
 ]
 
 [[package]]
@@ -2710,6 +2661,23 @@ files = [
 ]
 
 [[package]]
+name = "npc-samstim"
+version = "0.1.2"
+requires_python = ">=3.9"
+summary = "Tools for processing stim data from Sam's DynamicRoutingTask, compatible with data in the cloud."
+dependencies = [
+    "DynamicRoutingTask>=0.1.91",
+    "npc-ephys>=0.1.1",
+    "npc-stim>=0.1.1",
+    "npc-sync>=0.1.3",
+    "numba>=0.59.0",
+]
+files = [
+    {file = "npc-samstim-0.1.2.tar.gz", hash = "sha256:0371d5e324a44ff48e996d886e3aede185ab9bef0af6558517d86e1726d3ecb2"},
+    {file = "npc_samstim-0.1.2-py3-none-any.whl", hash = "sha256:30095428689e097d48ed1091258f1e0c386b184110845af3ba8409dd8ceae185"},
+]
+
+[[package]]
 name = "npc-session"
 version = "0.1.33"
 requires_python = ">=3.9"
@@ -2724,13 +2692,12 @@ files = [
 
 [[package]]
 name = "npc-sessions"
-version = "0.0.176"
+version = "0.0.203"
 requires_python = ">=3.9"
 summary = "Tools and interfaces for working with behavior and epyhys sessions from the Mindscope Neuropixels team, in the cloud."
 dependencies = [
     "DynamicRoutingTask>=0.1.14",
     "SimpleITK>=2.2.1",
-    "crc32c>=2.3.post0",
     "h5py>=3.9.0",
     "hdmf-zarr>=0.5.0",
     "hdmf>=3.9.0",
@@ -2740,8 +2707,8 @@ dependencies = [
     "matplotlib>=3.7.2",
     "nbconvert>=7.9.2",
     "ndx-events>=0.2.0",
-    "npc-lims>=0.1.103",
-    "npc-session>=0.1.31",
+    "ndx-pose>=0.1.1",
+    "npc-utils>=0.1.6",
     "numba>=0.57.1",
     "opencv-python-headless>=4.8.0.76",
     "pandas>=2.0",
@@ -2750,17 +2717,15 @@ dependencies = [
     "pynwb",
     "python-dotenv>=1.0.0",
     "rich>=13.5.2",
-    "s3fs>=2023.6.0",
     "scipy>=1.9.3",
     "spikeinterface>=0.98.2",
+    "tables>=3.9.2",
     "traitlets<=5.9.0",
-    "universal-pathlib>=0.1.1",
-    "wavpack-numcodecs>=0.1.4",
     "zarr>=2.16.1",
 ]
 files = [
-    {file = "npc_sessions-0.0.176-py3-none-any.whl", hash = "sha256:87fe4bf083b507d40af2822605273497c3734c33531857357538e85c29608d41"},
-    {file = "npc_sessions-0.0.176.tar.gz", hash = "sha256:9800f749b248c3935279a80d9b69a1f74836d8818a9b88dc2ef606e9c719f8fa"},
+    {file = "npc_sessions-0.0.203-py3-none-any.whl", hash = "sha256:b808a37b98d318530fc132a7485e10b0092334bd2a5a28d8c089cb8e511f8c74"},
+    {file = "npc_sessions-0.0.203.tar.gz", hash = "sha256:7f7c29c6182cd9c951ddf166fbe9f9bcfaf45736c787adaf7d72089eb365166c"},
 ]
 
 [[package]]
@@ -2779,16 +2744,17 @@ files = [
 
 [[package]]
 name = "npc-stim"
-version = "0.1.4"
+version = "0.1.5"
 requires_python = ">=3.9"
 summary = "Tools for accessing and processing stim data, compatible with data in the cloud."
 dependencies = [
     "npc-session>=0.1.33",
     "npc-sync>=0.1.3",
+    "scipy>=1.12.0",
 ]
 files = [
-    {file = "npc-stim-0.1.4.tar.gz", hash = "sha256:c7e7381b1b622b3d0402474d64420f431ce31a40d6de502b5e9ac61218d3a8c3"},
-    {file = "npc_stim-0.1.4-py3-none-any.whl", hash = "sha256:93ddc14320939180a228c0bddf1b9f586080433b8b93e4f1547050a11b2f6234"},
+    {file = "npc-stim-0.1.5.tar.gz", hash = "sha256:860cb76dcc80965ddb24998e03ee432222de7d0095b2cfc2bfdaf26f5bc04651"},
+    {file = "npc_stim-0.1.5-py3-none-any.whl", hash = "sha256:b06287059917807bb9923f522e86db748b45e5073a97f6e6a123a93f55ee762c"},
 ]
 
 [[package]]
@@ -2807,6 +2773,26 @@ dependencies = [
 files = [
     {file = "npc-sync-0.1.6.tar.gz", hash = "sha256:3fb27f1159db386ac8b00fe561f49a106ce5e238adbf7e39d09ba8e5921e29e1"},
     {file = "npc_sync-0.1.6-py3-none-any.whl", hash = "sha256:6f249d79e0693aa1762fdef8941a3d16d7d38c555f32362d755198871de9b96d"},
+]
+
+[[package]]
+name = "npc-utils"
+version = "0.1.6"
+requires_python = ">=3.9"
+summary = "Collection of MindScope Neuropixels packages, simplifying installation and keeping versions updated."
+dependencies = [
+    "npc-ephys>=0.1.10",
+    "npc-io>=0.1.24",
+    "npc-lims>=0.1.133",
+    "npc-mvr>=0.1.2",
+    "npc-samstim>=0.1.2",
+    "npc-session>=0.1.33",
+    "npc-stim>=0.1.5",
+    "npc-sync>=0.1.6",
+]
+files = [
+    {file = "npc-utils-0.1.6.tar.gz", hash = "sha256:1c31f1b4581202b86a7c3797c2e9ecad506baf45114abd991c7904e1ff318baf"},
+    {file = "npc_utils-0.1.6-py3-none-any.whl", hash = "sha256:df0f687eaa02e3394426cffe0e6d5855d9cfbbe5c4b33a67c06b62cee2428878"},
 ]
 
 [[package]]
@@ -3117,12 +3103,12 @@ files = [
 
 [[package]]
 name = "platformdirs"
-version = "3.8.1"
+version = "3.11.0"
 requires_python = ">=3.7"
 summary = "A small Python package for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
 files = [
-    {file = "platformdirs-3.8.1-py3-none-any.whl", hash = "sha256:cec7b889196b9144d088e4c57d9ceef7374f6c39694ad1577a0aab50d27ea28c"},
-    {file = "platformdirs-3.8.1.tar.gz", hash = "sha256:f87ca4fcff7d2b0f81c6a748a77973d7af0f4d526f98f308477c3c436c74d528"},
+    {file = "platformdirs-3.11.0-py3-none-any.whl", hash = "sha256:e9d171d00af68be50e9202731309c4e658fd8bc76f55c11c7dd760d023bda68e"},
+    {file = "platformdirs-3.11.0.tar.gz", hash = "sha256:cf8ee52a3afdb965072dcc652433e0c7e3e40cf5ea1477cd4b3b1d2eb75495b3"},
 ]
 
 [[package]]
@@ -4058,32 +4044,20 @@ files = [
 
 [[package]]
 name = "scipy"
-version = "1.11.1"
-requires_python = "<3.13,>=3.9"
+version = "1.12.0"
+requires_python = ">=3.9"
 summary = "Fundamental algorithms for scientific computing in Python"
 dependencies = [
-    "numpy<1.28.0,>=1.21.6",
+    "numpy<1.29.0,>=1.22.4",
 ]
 files = [
-    {file = "scipy-1.11.1-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:aec8c62fbe52914f9cf28d846cf0401dd80ab80788bbab909434eb336ed07c04"},
-    {file = "scipy-1.11.1-cp310-cp310-macosx_12_0_arm64.whl", hash = "sha256:3b9963798df1d8a52db41a6fc0e6fa65b1c60e85d73da27ae8bb754de4792481"},
-    {file = "scipy-1.11.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:3e8eb42db36526b130dfbc417609498a6192381abc1975b91e3eb238e0b41c1a"},
-    {file = "scipy-1.11.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:366a6a937110d80dca4f63b3f5b00cc89d36f678b2d124a01067b154e692bab1"},
-    {file = "scipy-1.11.1-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:08d957ca82d3535b3b9ba6c8ff355d78fe975271874e2af267cb5add5bd78625"},
-    {file = "scipy-1.11.1-cp310-cp310-win_amd64.whl", hash = "sha256:e866514bc2d660608447b6ba95c8900d591f2865c07cca0aa4f7ff3c4ca70f30"},
-    {file = "scipy-1.11.1-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:ba94eeef3c9caa4cea7b402a35bb02a5714ee1ee77eb98aca1eed4543beb0f4c"},
-    {file = "scipy-1.11.1-cp311-cp311-macosx_12_0_arm64.whl", hash = "sha256:512fdc18c65f76dadaca139348e525646d440220d8d05f6d21965b8d4466bccd"},
-    {file = "scipy-1.11.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:cce154372f0ebe88556ed06d7b196e9c2e0c13080ecb58d0f35062dc7cc28b47"},
-    {file = "scipy-1.11.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b4bb943010203465ac81efa392e4645265077b4d9e99b66cf3ed33ae12254173"},
-    {file = "scipy-1.11.1-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:249cfa465c379c9bb2c20123001e151ff5e29b351cbb7f9c91587260602c58d0"},
-    {file = "scipy-1.11.1-cp311-cp311-win_amd64.whl", hash = "sha256:ffb28e3fa31b9c376d0fb1f74c1f13911c8c154a760312fbee87a21eb21efe31"},
-    {file = "scipy-1.11.1-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:39154437654260a52871dfde852adf1b93b1d1bc5dc0ffa70068f16ec0be2624"},
-    {file = "scipy-1.11.1-cp39-cp39-macosx_12_0_arm64.whl", hash = "sha256:b588311875c58d1acd4ef17c983b9f1ab5391755a47c3d70b6bd503a45bfaf71"},
-    {file = "scipy-1.11.1-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:d51565560565a0307ed06fa0ec4c6f21ff094947d4844d6068ed04400c72d0c3"},
-    {file = "scipy-1.11.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b41a0f322b4eb51b078cb3441e950ad661ede490c3aca66edef66f4b37ab1877"},
-    {file = "scipy-1.11.1-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:396fae3f8c12ad14c5f3eb40499fd06a6fef8393a6baa352a652ecd51e74e029"},
-    {file = "scipy-1.11.1-cp39-cp39-win_amd64.whl", hash = "sha256:be8c962a821957fdde8c4044efdab7a140c13294997a407eaee777acf63cbf0c"},
-    {file = "scipy-1.11.1.tar.gz", hash = "sha256:fb5b492fa035334fd249f0973cc79ecad8b09c604b42a127a677b45a9a3d4289"},
+    {file = "scipy-1.12.0-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:408c68423f9de16cb9e602528be4ce0d6312b05001f3de61fe9ec8b1263cad08"},
+    {file = "scipy-1.12.0-cp311-cp311-macosx_12_0_arm64.whl", hash = "sha256:5adfad5dbf0163397beb4aca679187d24aec085343755fcdbdeb32b3679f254c"},
+    {file = "scipy-1.12.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:c3003652496f6e7c387b1cf63f4bb720951cfa18907e998ea551e6de51a04467"},
+    {file = "scipy-1.12.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8b8066bce124ee5531d12a74b617d9ac0ea59245246410e19bca549656d9a40a"},
+    {file = "scipy-1.12.0-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:8bee4993817e204d761dba10dbab0774ba5a8612e57e81319ea04d84945375ba"},
+    {file = "scipy-1.12.0-cp311-cp311-win_amd64.whl", hash = "sha256:a24024d45ce9a675c1fb8494e8e5244efea1c7a09c60beb1eeb80373d0fecc70"},
+    {file = "scipy-1.12.0.tar.gz", hash = "sha256:4bf5abab8a36d20193c698b0f1fc282c1d083c94723902c447e5d2f1780936a3"},
 ]
 
 [[package]]
@@ -4192,35 +4166,22 @@ files = [
 
 [[package]]
 name = "tables"
-version = "3.8.0"
-requires_python = ">=3.8"
+version = "3.9.2"
+requires_python = ">=3.9"
 summary = "Hierarchical datasets for Python"
 dependencies = [
-    "blosc2~=2.0.0",
-    "cython>=0.29.21",
+    "blosc2>=2.3.0",
     "numexpr>=2.6.2",
     "numpy>=1.19.0",
     "packaging",
     "py-cpuinfo",
 ]
 files = [
-    {file = "tables-3.8.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:01e82e40f9845f71de137b4472210909e35c440bbcd0858bdd2871715daef4c7"},
-    {file = "tables-3.8.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:db185d855afd45a7259ddd0b53e5f2f8993bb134b370002c6c19532f27ce92ac"},
-    {file = "tables-3.8.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:70a3585a268beee6d0e71bfc9abec98da84d168182f350a2ffa1ae5e42798c18"},
-    {file = "tables-3.8.0-cp310-cp310-win_amd64.whl", hash = "sha256:117cf0f73ee2a5cba5c2b04e4aca375779aec66045aa63128e043dc608f2023b"},
-    {file = "tables-3.8.0-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:2861cd3ef9eb95eead7530e4de49fd130954871e7e6d2e288012797cb9d7c2e8"},
-    {file = "tables-3.8.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:7e9bdbfbe025b6c751976382123c5f5cbd8fab6956aed776b0e8c889669e90d3"},
-    {file = "tables-3.8.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f0821007048f2af8c1a21eb3d832072046c5df366e39587a7c7e4afad14e73fc"},
-    {file = "tables-3.8.0-cp311-cp311-win_amd64.whl", hash = "sha256:b9370c2a4dc0051aad6b71de4f1f9b0b8b60d30b662df5c742434f2b5c6a005e"},
-    {file = "tables-3.8.0-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:e19686fad4e8f5a91c3dc1eb4b7ea928838e86fefa474c63c5787a125ea79fc7"},
-    {file = "tables-3.8.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:239f15fa9881c257b5c0d9fb4cb8832778af1c5c8c1db6f6722466f8f26541e2"},
-    {file = "tables-3.8.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c83a74cac3c0629a0e83570d465f88843ef3609ef56a8ef9a49ee85ab3b8f02f"},
-    {file = "tables-3.8.0-cp38-cp38-win_amd64.whl", hash = "sha256:a5ccb80651c5fad6ac744e2a756b28cfac78eab3b8503f4a2320ee6653b3bee9"},
-    {file = "tables-3.8.0-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:3375bfafc6cf305d13617a572ab3fffc51fae2fbe0f6efce9407a41f79970b62"},
-    {file = "tables-3.8.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:254a4d5c2009c7ebe4293b02b8d91ea60837bff85a3c0a40cd075b8f12b1e6c3"},
-    {file = "tables-3.8.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:da3c96456c473fb977cf6dbca9e889710ac020df1fa5b9ebb7f676e83996337d"},
-    {file = "tables-3.8.0-cp39-cp39-win_amd64.whl", hash = "sha256:72da9404094ef8277bf62fce8873e8dc141cee9a8763ec8e7080b2d0de206094"},
-    {file = "tables-3.8.0.tar.gz", hash = "sha256:34f3fa2366ce20b18f1df573a77c1d27306ce1f2a41d9f9eff621b5192ea8788"},
+    {file = "tables-3.9.2-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:d71913fb8147dc6132595b94fc82f88f6c2436a3b5c57aadfe26c680f96aa387"},
+    {file = "tables-3.9.2-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:9d6bbc477d038a17c5062ab6ccd94c8b1fa365cf017b9a2ad6c2dff1a07abb2b"},
+    {file = "tables-3.9.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8e67c71070b871fade3694a4c764504e03836bb1843321766cf2e40b7d280e84"},
+    {file = "tables-3.9.2-cp311-cp311-win_amd64.whl", hash = "sha256:ab9291ff4d243e7966b6706a2675b83138bd9bbe82721d695b78971660d59632"},
+    {file = "tables-3.9.2.tar.gz", hash = "sha256:d470263c2e50c4b7c8635a0d99ac1ff2f9e704c24d71e5fa33c4529e7d0ad9c3"},
 ]
 
 [[package]]
