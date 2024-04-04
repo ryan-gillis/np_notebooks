@@ -117,13 +117,13 @@ ndx-pose==0.1.1
 neo==0.12.0
 nest-asyncio==1.5.6
 notebook-shim==0.2.3
-np-config==0.4.26
+np-config==0.4.27
 np-jobs==0.0.6
 np-logging==0.5.1
 np-services==0.1.63
 np-session==0.6.40
 np-tools==0.1.20
-np-workflows==1.6.63
+np-workflows==1.6.65
 npc-ephys==0.1.10
 npc-io==0.1.24
 npc-lims==0.1.134

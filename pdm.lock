@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform"]
 lock_version = "4.4.1"
-content_hash = "sha256:fe051450ea505a15fc9da568b7f60954172cfb63ec4f0f2d91c61741ae128f0c"
+content_hash = "sha256:7372d5397944cf80074cb841b12f2b896654d06da1e82e72484d47b1405c6010"
 
 [[package]]
 name = "aind-codeocean-api"
@@ -2446,7 +2446,7 @@ files = [
 
 [[package]]
 name = "np-config"
-version = "0.4.26"
+version = "0.4.27"
 requires_python = ">=3.7,<4.0"
 summary = "Config fetching from file or Zookeeper - with local backup - repackaging code from AIBS mpeconfig."
 dependencies = [
@@ -2460,8 +2460,8 @@ dependencies = [
     "typing-extensions>=4",
 ]
 files = [
-    {file = "np_config-0.4.26-py3-none-any.whl", hash = "sha256:1fd65608dfa0afbccab34c6236efd8fd82dc0887623f6ed6f964a899b56ffac2"},
-    {file = "np_config-0.4.26.tar.gz", hash = "sha256:fe3e2c3a3675598faa33c63577bc1baf626a2bbe9a84bc78dac447ba90912d10"},
+    {file = "np_config-0.4.27-py3-none-any.whl", hash = "sha256:317a13486df52a718fc642cf4933436fdf66ced454e3c469fcab534637d3604b"},
+    {file = "np_config-0.4.27.tar.gz", hash = "sha256:b50ea245974c44b2d65a2ce8296df706ec286aa4cee4289e71e3761b15bd2b3c"},
 ]
 
 [[package]]
@@ -2561,14 +2561,14 @@ files = [
 
 [[package]]
 name = "np-workflows"
-version = "1.6.63"
+version = "1.6.65"
 requires_python = "==3.11.*"
 summary = "Ecephys and behavior workflows for the Mindscope Neuropixels team."
 dependencies = [
     "ipylab>=0.6.0",
     "ipywidgets>=7",
     "jupyterlab>=3.6",
-    "np-config>=0.4.26",
+    "np-config>=0.4.27",
     "np-jobs>=0.0.3",
     "np-services>=0.1.63",
     "np-session>=0.6.40",
@@ -2580,8 +2580,8 @@ dependencies = [
     "universal-pathlib>=0.1.0",
 ]
 files = [
-    {file = "np_workflows-1.6.63-py3-none-any.whl", hash = "sha256:60128895089d16a7303ab7efb58046689667fa291f355b0595dc17ce35778c2d"},
-    {file = "np_workflows-1.6.63.tar.gz", hash = "sha256:259f8f05e37a5b71e3ece473e7c36dd5f35e9a8980433e106b73da610d0b9739"},
+    {file = "np_workflows-1.6.65-py3-none-any.whl", hash = "sha256:60d4dcaaac03ec1e4d22f88e56e0f99959b415e2cd54cc4517ccfe2db9d91ce6"},
+    {file = "np_workflows-1.6.65.tar.gz", hash = "sha256:f5846eea86bb3bbd0318ff98bac584a65986b882b2d495a7245f7e6261367cf7"},
 ]
 
 [[package]]
