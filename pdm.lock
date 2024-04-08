@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform"]
 lock_version = "4.4.1"
-content_hash = "sha256:a4dffeebd9e749adbc91dffe84d1d93dbd43f9efb854987701765a7c278f8357"
+content_hash = "sha256:65bb79c784280d9c892c6774afd7716d7c386b3f344372e1f1555a3053a64e3b"
 
 [[package]]
 name = "aind-codeocean-api"
@@ -2561,7 +2561,7 @@ files = [
 
 [[package]]
 name = "np-workflows"
-version = "1.6.66"
+version = "1.6.67"
 requires_python = "==3.11.*"
 summary = "Ecephys and behavior workflows for the Mindscope Neuropixels team."
 dependencies = [
@@ -2580,8 +2580,8 @@ dependencies = [
     "universal-pathlib>=0.1.0",
 ]
 files = [
-    {file = "np_workflows-1.6.66-py3-none-any.whl", hash = "sha256:694853c1ec24050aa74b7f3aa65fe9507a31ebd362e68e792f56c6277a244546"},
-    {file = "np_workflows-1.6.66.tar.gz", hash = "sha256:372d4a38f5af74f8ce80807425293ccf2b79a20703fb0d8e30504f2816524355"},
+    {file = "np_workflows-1.6.67-py3-none-any.whl", hash = "sha256:52689a0b08b7d6962bb3337a801b2fa8e2b810d5d42bd4e4fb28dc5a67a905b0"},
+    {file = "np_workflows-1.6.67.tar.gz", hash = "sha256:fc0091281aeae6de7272f2d0ce89f6a94a2d718e03618d79daef173c691a436f"},
 ]
 
 [[package]]
