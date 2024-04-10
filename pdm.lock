@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform"]
 lock_version = "4.4.1"
-content_hash = "sha256:65bb79c784280d9c892c6774afd7716d7c386b3f344372e1f1555a3053a64e3b"
+content_hash = "sha256:7c80ce3657a856afb9ecc1744f12adc26ae90d30c18af5cf386f7255cee40307"
 
 [[package]]
 name = "aind-codeocean-api"
@@ -2496,7 +2496,7 @@ files = [
 
 [[package]]
 name = "np-services"
-version = "0.1.63"
+version = "0.1.67"
 requires_python = "<4.0,>=3.11"
 summary = "Tools for interfacing with devices and services used in Mindscope Neuropixels experiments at the Allen Institute."
 dependencies = [
@@ -2514,8 +2514,8 @@ dependencies = [
     "tables<4.0.0,>=3.8.0",
 ]
 files = [
-    {file = "np_services-0.1.63-py3-none-any.whl", hash = "sha256:1c63467642136561f7e2c15c722a5a42830cb9e2a35a675d935461f52b5e2db3"},
-    {file = "np_services-0.1.63.tar.gz", hash = "sha256:1cb7961379bfde04efafbc38cbbffc39463459a1b539badd872bffdaa67be759"},
+    {file = "np_services-0.1.67-py3-none-any.whl", hash = "sha256:d8f2d96f3b0f88e11baeb106ca3a816991bf01d59ae00f818e4ccf8350d349c2"},
+    {file = "np_services-0.1.67.tar.gz", hash = "sha256:283d4e59f1d75b092c096bd6b0617a28f16d3fd3854877849688c73a0947275a"},
 ]
 
 [[package]]
@@ -2561,7 +2561,7 @@ files = [
 
 [[package]]
 name = "np-workflows"
-version = "1.6.67"
+version = "1.6.68"
 requires_python = "==3.11.*"
 summary = "Ecephys and behavior workflows for the Mindscope Neuropixels team."
 dependencies = [
@@ -2570,7 +2570,7 @@ dependencies = [
     "jupyterlab>=3.6",
     "np-config>=0.4.27",
     "np-jobs>=0.0.3",
-    "np-services>=0.1.63",
+    "np-services>=0.1.67",
     "np-session>=0.6.40",
     "np-tools>=0.1.14",
     "npc-sessions>=0.0.201",
@@ -2580,8 +2580,8 @@ dependencies = [
     "universal-pathlib>=0.1.0",
 ]
 files = [
-    {file = "np_workflows-1.6.67-py3-none-any.whl", hash = "sha256:52689a0b08b7d6962bb3337a801b2fa8e2b810d5d42bd4e4fb28dc5a67a905b0"},
-    {file = "np_workflows-1.6.67.tar.gz", hash = "sha256:fc0091281aeae6de7272f2d0ce89f6a94a2d718e03618d79daef173c691a436f"},
+    {file = "np_workflows-1.6.68-py3-none-any.whl", hash = "sha256:263675b2846cec6398e81350e3703d0a1694f43778a0f40e68d246a4502e7b7b"},
+    {file = "np_workflows-1.6.68.tar.gz", hash = "sha256:98b674633c5607e713b3827f76c10f46c10563b59a244c52d4e64f3890964cda"},
 ]
 
 [[package]]
