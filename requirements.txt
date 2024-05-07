@@ -2,6 +2,8 @@
 # Please do not edit it manually.
 
 aind-codeocean-api==0.4.0
+aind-data-schema==0.35.0
+aind-data-schema-models==0.1.0
 aiobotocore==2.5.4
 aiohttp==3.8.4
 aioitertools==0.11.0
@@ -41,7 +43,8 @@ debugpy==1.6.7
 decorator==5.1.1
 defusedxml==0.7.1
 deprecated==1.2.14
-DynamicRoutingTask==0.1.92
+dictdiffer==0.9.0
+DynamicRoutingTask==0.1.102
 entrypoints==0.4
 et-xmlfile==1.1.0
 executing==1.2.0
@@ -71,6 +74,7 @@ hdmf-zarr==0.5.0
 httplib2==0.22.0
 idna==3.4
 importlib-resources==6.0.0
+inflection==0.5.1
 invoke==1.7.3
 ipykernel==6.25.2
 ipylab==0.7.1
@@ -123,18 +127,17 @@ np-logging==0.5.1
 np-services==0.1.67
 np-session==0.6.40
 np-tools==0.1.20
-np-workflows==1.6.68
-npc-ephys==0.1.10
-npc-io==0.1.24
-npc-lims==0.1.134
-npc-mvr==0.1.2
-npc-samstim==0.1.2
-npc-session==0.1.33
-npc-sessions==0.0.203
+np-workflows==1.6.69
+npc-ephys==0.1.14
+npc-io==0.1.26
+npc-lims==0.1.153
+npc-mvr==0.1.6
+npc-samstim==0.1.4
+npc-session==0.1.34
+npc-sessions==0.0.222
 npc-shields==0.1.5
-npc-stim==0.1.5
-npc-sync==0.1.6
-npc-utils==0.1.6
+npc-stim==0.1.8
+npc-sync==0.1.12
 numba==0.59.0
 numcodecs==0.11.0
 numexpr==2.8.4
@@ -167,8 +170,8 @@ pyarrow==15.0.0
 pyasn1==0.5.0
 pyasn1-modules==0.3.0
 pycparser==2.21
-pydantic==2.5.3
-pydantic-core==2.14.6
+pydantic==2.7.1
+pydantic-core==2.18.2
 pydantic-settings==2.1.0
 pydbhub-bjh==0.0.9
 pygments==2.15.1
@@ -199,6 +202,7 @@ ruamel-yaml-clib==0.2.7; platform_python_implementation == "CPython" and python_
 s3fs==2024.2.0
 s3transfer==0.6.1
 scipy==1.12.0
+semver==3.0.2
 send2trash==1.8.2
 setuptools==67.8.0
 SimpleITK==2.3.0
