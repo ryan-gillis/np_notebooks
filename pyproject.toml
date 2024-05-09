@@ -8,4 +8,5 @@ dependencies = [
     "jupyterlab>=3.6",
     "np-workflows>=1.6.69",
     "npc-sessions>=0.0.222",
+    "aind-data-schema==0.33.8",
 ]
