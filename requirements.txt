@@ -120,13 +120,14 @@ ndx-pose==0.1.1
 neo==0.12.0
 nest-asyncio==1.5.6
 notebook-shim==0.2.3
+np-codeocean==0.2.0
 np-config==0.4.27
 np-jobs==0.0.6
 np-logging==0.5.1
 np-services==0.1.67
 np-session==0.6.40
-np-tools==0.1.20
-np-workflows==1.6.69
+np-tools==0.1.22
+np-workflows==1.6.71
 npc-ephys==0.1.14
 npc-io==0.1.26
 npc-lims==0.1.153
@@ -154,7 +155,7 @@ pexpect==4.8.0; sys_platform != "win32"
 pickleshare==0.7.5
 pillow==10.0.0
 platformdirs==3.11.0
-polars==0.20.5
+polars==0.20.26
 probeinterface==0.2.17
 prometheus-client==0.17.1
 prompt-toolkit==3.0.39
