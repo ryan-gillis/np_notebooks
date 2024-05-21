@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform"]
 lock_version = "4.4.1"
-content_hash = "sha256:449598a653dfea09216b05b2050a28f3b527788b0e3df29ae708f942986602f8"
+content_hash = "sha256:97bd21250bea56c075d25de127130690528977e4bd5857b4be9ace6111dcb754"
 
 [[package]]
 name = "aind-codeocean-api"
@@ -2560,7 +2560,7 @@ files = [
 
 [[package]]
 name = "np-services"
-version = "0.1.67"
+version = "0.1.68"
 requires_python = "<4.0,>=3.11"
 summary = "Tools for interfacing with devices and services used in Mindscope Neuropixels experiments at the Allen Institute."
 dependencies = [
@@ -2571,15 +2571,15 @@ dependencies = [
     "npc-ephys>=0.1.7",
     "npc-mvr>=0.1.2",
     "npc-stim>=0.1.5",
-    "npc-sync>=0.1.6",
+    "npc-sync>=0.1.13",
     "pandas>=2.0",
     "pyzmq",
     "requests<3,>=2",
     "tables<4.0.0,>=3.8.0",
 ]
 files = [
-    {file = "np_services-0.1.67-py3-none-any.whl", hash = "sha256:d8f2d96f3b0f88e11baeb106ca3a816991bf01d59ae00f818e4ccf8350d349c2"},
-    {file = "np_services-0.1.67.tar.gz", hash = "sha256:283d4e59f1d75b092c096bd6b0617a28f16d3fd3854877849688c73a0947275a"},
+    {file = "np_services-0.1.68-py3-none-any.whl", hash = "sha256:87090eb1f42ff90e631a5a0f42790ce44243a4e176495e16789717ed4d1842c6"},
+    {file = "np_services-0.1.68.tar.gz", hash = "sha256:7d18655645f4a43f567dbe091be013e50996769ec89695462e5d6899be118594"},
 ]
 
 [[package]]
@@ -2625,7 +2625,7 @@ files = [
 
 [[package]]
 name = "np-workflows"
-version = "1.6.71"
+version = "1.6.72"
 requires_python = "==3.11.*"
 summary = "Ecephys and behavior workflows for the Mindscope Neuropixels team."
 dependencies = [
@@ -2635,7 +2635,7 @@ dependencies = [
     "np-codeocean>=0.1.9",
     "np-config>=0.4.27",
     "np-jobs>=0.0.3",
-    "np-services>=0.1.67",
+    "np-services>=0.1.68",
     "np-session>=0.6.40",
     "np-tools>=0.1.14",
     "npc-sessions>=0.0.201",
@@ -2645,8 +2645,8 @@ dependencies = [
     "universal-pathlib>=0.1.0",
 ]
 files = [
-    {file = "np_workflows-1.6.71-py3-none-any.whl", hash = "sha256:b5fd3d067ff33c1ad6f9cccec5652e4561f77311bb70771888f746972928919a"},
-    {file = "np_workflows-1.6.71.tar.gz", hash = "sha256:002c97986f17e7da5f5714ec3523282366fdf6497a01c8052af98c3b849685c0"},
+    {file = "np_workflows-1.6.72-py3-none-any.whl", hash = "sha256:2ec3dd975e86e743b243c853342f8fc5de0dd3b251da7b9bc114422db4008713"},
+    {file = "np_workflows-1.6.72.tar.gz", hash = "sha256:6a7de013a95cff85fd7685e5948cb186a0aad63bce561bf3d38e8a469d5ea4ca"},
 ]
 
 [[package]]
@@ -2836,7 +2836,7 @@ files = [
 
 [[package]]
 name = "npc-sync"
-version = "0.1.12"
+version = "0.1.13"
 requires_python = ">=3.9"
 summary = "Repackaging of AllenSDK.SyncDataset with extra functionality, compatible with data in the cloud."
 dependencies = [
@@ -2848,8 +2848,8 @@ dependencies = [
     "typing-extensions>=4.9.0",
 ]
 files = [
-    {file = "npc_sync-0.1.12-py3-none-any.whl", hash = "sha256:591bf48e31656dc61bf146a6ec3c97c6fceca89160fb36e1d61bceaaaba177df"},
-    {file = "npc_sync-0.1.12.tar.gz", hash = "sha256:880e17fdb06b6a164359f8996378f1341eaca6e6a9e0c11f8a9563debcf0b065"},
+    {file = "npc_sync-0.1.13-py3-none-any.whl", hash = "sha256:5fa6c49dabf7708f435a685915fc3b1294f28a02c86560e1882c7755f31c0df2"},
+    {file = "npc_sync-0.1.13.tar.gz", hash = "sha256:183a63f2c4d033e41ddc0d7bc7268199a837ea607333cfe6f1517f765edf6288"},
 ]
 
 [[package]]
