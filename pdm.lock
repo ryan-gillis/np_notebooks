@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform"]
 lock_version = "4.4.1"
-content_hash = "sha256:97bd21250bea56c075d25de127130690528977e4bd5857b4be9ace6111dcb754"
+content_hash = "sha256:1f09170315cf14d583220e6fbae23672ee9a2bc0038c6bf2762eb6850d048b68"
 
 [[package]]
 name = "aind-codeocean-api"
@@ -25,7 +25,7 @@ files = [
 
 [[package]]
 name = "aind-data-schema"
-version = "0.33.8"
+version = "0.33.3"
 requires_python = ">=3.8"
 summary = "A library that defines AIND data schema and validates JSON files."
 dependencies = [
@@ -36,8 +36,8 @@ dependencies = [
     "semver",
 ]
 files = [
-    {file = "aind_data_schema-0.33.8-py3-none-any.whl", hash = "sha256:00175fee1e5550abf5b113a0d3beb2d570aa4a83db97b221b47cb8733947d07a"},
-    {file = "aind_data_schema-0.33.8.tar.gz", hash = "sha256:1949c8526fd9a9c74239570b9b897819184edf8ec78fbc83201c8e6add590edd"},
+    {file = "aind-data-schema-0.33.3.tar.gz", hash = "sha256:8c8484df938e4757d2d9d21a57e343d6ef59a698ea0602a27f5d6584b9c3e2e6"},
+    {file = "aind_data_schema-0.33.3-py3-none-any.whl", hash = "sha256:da4993ca2744ac700b7a8f0bedb00db41c52a72b370f7386238138f34c01b0f4"},
 ]
 
 [[package]]
@@ -2560,7 +2560,7 @@ files = [
 
 [[package]]
 name = "np-services"
-version = "0.1.68"
+version = "0.1.69"
 requires_python = "<4.0,>=3.11"
 summary = "Tools for interfacing with devices and services used in Mindscope Neuropixels experiments at the Allen Institute."
 dependencies = [
@@ -2578,8 +2578,8 @@ dependencies = [
     "tables<4.0.0,>=3.8.0",
 ]
 files = [
-    {file = "np_services-0.1.68-py3-none-any.whl", hash = "sha256:87090eb1f42ff90e631a5a0f42790ce44243a4e176495e16789717ed4d1842c6"},
-    {file = "np_services-0.1.68.tar.gz", hash = "sha256:7d18655645f4a43f567dbe091be013e50996769ec89695462e5d6899be118594"},
+    {file = "np_services-0.1.69-py3-none-any.whl", hash = "sha256:2268d851785a8005e081e21eb08b7e86436ca491c5df37553ee393e557a84f95"},
+    {file = "np_services-0.1.69.tar.gz", hash = "sha256:462dac31d3b12cce0282e5f9397da35f5687a5471d676d9a700e25767c55f817"},
 ]
 
 [[package]]
@@ -2625,7 +2625,7 @@ files = [
 
 [[package]]
 name = "np-workflows"
-version = "1.6.72"
+version = "1.6.74"
 requires_python = "==3.11.*"
 summary = "Ecephys and behavior workflows for the Mindscope Neuropixels team."
 dependencies = [
@@ -2635,7 +2635,7 @@ dependencies = [
     "np-codeocean>=0.1.9",
     "np-config>=0.4.27",
     "np-jobs>=0.0.3",
-    "np-services>=0.1.68",
+    "np-services>=0.1.69",
     "np-session>=0.6.40",
     "np-tools>=0.1.14",
     "npc-sessions>=0.0.201",
@@ -2645,8 +2645,8 @@ dependencies = [
     "universal-pathlib>=0.1.0",
 ]
 files = [
-    {file = "np_workflows-1.6.72-py3-none-any.whl", hash = "sha256:2ec3dd975e86e743b243c853342f8fc5de0dd3b251da7b9bc114422db4008713"},
-    {file = "np_workflows-1.6.72.tar.gz", hash = "sha256:6a7de013a95cff85fd7685e5948cb186a0aad63bce561bf3d38e8a469d5ea4ca"},
+    {file = "np_workflows-1.6.74-py3-none-any.whl", hash = "sha256:b09e86e4bbbc91cc9825fbe3cf96fa82130de7272a975734b6b3d26a650df6d0"},
+    {file = "np_workflows-1.6.74.tar.gz", hash = "sha256:7318aaca1ce1424c04a17ead896c0d3cea9436d449973bc04c03ef0b7be3a0a1"},
 ]
 
 [[package]]
