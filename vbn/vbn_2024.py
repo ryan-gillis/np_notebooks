@@ -85,7 +85,7 @@ class VBNMixin:
     user: np_session.User
     platform_json: np_session.PlatformJson
     
-    commit_hash = '5adfa6e285774719135d0ebcba421f15f6f56168'
+    commit_hash = '8f6471f21ad8efd1ba59333099f04607cd6b5f51'
 
     task_id = 'replay'
         
@@ -290,6 +290,26 @@ class VBNMixin:
 
         super().initialize_and_test_services()
 
+    def start_recording(self) -> None:
+        last_exception = Exception()
+        attempts = 3
+        while attempts:
+            np_logging.getLogger().info('Waiting for recorders to finish processing') 
+            while not all(r.is_ready_to_start() for r in self.recorders):
+                time.sleep(1)
+            np_logging.getLogger().info('Recorders ready')     
+            try:
+                super().start_recording()
+            except AssertionError as exc:
+                np_logging.getLogger().info('`experiment.start_recording` failed: trying again')
+                attempts -= 1
+                last_exception = exc              # exc only exists within the try block
+            
+            else:
+                break
+        else:
+            np_logging.getLogger().error(f'`experiment.start_recording` failed after multiple attempts', exc_info=last_exception)
+            raise last_exception
             
 
 class Hab(VBNMixin, np_workflows.PipelineHab):
