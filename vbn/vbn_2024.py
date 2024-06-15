@@ -232,7 +232,7 @@ class VBNMixin:
         self.stims[0].data_files.pop()
         self.stims[0].data_files.append(new)
         if script_name == 'behavior':
-            (foraging_pkl := latest.with_stem(self.foraging_id)).write_bytes(latest.read_bytes())
+            (foraging_pkl := latest.with_stem(f"behavior-{self.foraging_id}-{self.mouse.id}")).write_bytes(latest.read_bytes())
             logger.info("Copied %s to %s", latest.name, foraging_pkl.name)
         
     def run_script(self, script_name: str | ScriptName) -> None:
