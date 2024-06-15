@@ -86,7 +86,7 @@ class VBNMixin:
     user: np_session.User
     platform_json: np_session.PlatformJson
     
-    commit_hash = '8f6471f21ad8efd1ba59333099f04607cd6b5f51'
+    commit_hash = 'ec22b933faf026cbecc8ec94cf6e758dc3c1604e'
 
     task_id = 'replay'
         
