@@ -44,16 +44,17 @@ import copy
 import enum
 import functools
 import pathlib
+import re
 import time
 import uuid
 from typing import Any, Literal, Optional, TypeAlias
 
+import ipywidgets as ipw
 import np_config
 import np_logging
 import np_services
 import np_session
 import requests
-import ipywidgets as ipw
 
 import np_workflows
 
@@ -107,6 +108,14 @@ class VBNMixin:
         return self.mouse.mtrain.stage['parameters'] | {'replay_id': self.foraging_id}
 
     @property
+    def ephys_day(self) -> int:
+        stage_name: str = self.mouse.mtrain.stage['name']
+        match = re.search("(?<=day\_)([0-9])", stage_name.lower())
+        if match is None:
+            raise ValueError(f"Could not find ephys day in stage name: {stage_name}")
+        return int(match.group(0))
+
+    @property
     def foraging_id(self) -> str:
         """Read-only, created on first read"""
         if not getattr(self, "_foraging_id", None):
@@ -144,7 +153,7 @@ class VBNMixin:
         params = copy.deepcopy(self.stage_params["opto_params"])
         params.setdefault("level_list", [1.0, 1.2, 1.3]) #TODO
         logger.warning("Optotagging levels need updating with non-default values")
-        params["mouseID"] = self.mouse.id
+        params["mouseID"] = str(self.mouse.id)
         if self.workflow == Workflow.PRETEST:
             params["operation_mode"] = "pretest"
         return params
@@ -201,15 +210,30 @@ class VBNMixin:
             weblog_name = self.workflow.name
         with contextlib.suppress(AttributeError):
             np_logging.web(f'{weblog_name.lower()}_{self.mouse}').info(message)
-            
-    def rename_latest_pickle_file(self, script_name: str) -> None:
+    
+    def copy_and_rename_latest_pickle_file(self, script_name: str) -> None:
         """Make sure to run after stim.finalize()"""
-        latest = self.stims[0].data_files[-1]
+        latest: pathlib.Path = self.stims[0].data_files[-1]
+        latest_start_time = self.stims[0].latest_start
+        if latest.stat().st_mtime < latest_start_time:
+            raise FileNotFoundError(
+                f"Attempting to rename {latest.name}, but its timestamp indicates it was created before the last script run."
+                " The previous script either didn't complete or created a pkl file in an unknown location."
+            )
+        elif latest_start_time == 0:
+            raise ValueError(f"latest_start_time is 0: {self.stims[0]} is not correctly logging start times.")
         new_name = f"{self.session.folder}.{script_name}.pkl"
-        if new_name != latest.name:
-            renamed = latest.rename(latest.with_name(new_name))
-            logger.info("Renamed %s to %s", latest.name, renamed.name)
-            self.stims[0].data_files[-1] = renamed
+        if new_name == latest.name:
+            logger.warning("Already renamed %s", latest.name)
+            return None
+        new = latest.with_name(new_name)
+        new.write_bytes(latest.read_bytes())
+        logger.info("Copied %s to %s", latest.name, new.name)
+        self.stims[0].data_files.pop()
+        self.stims[0].data_files.append(new)
+        if script_name == 'behavior':
+            (foraging_pkl := latest.with_stem(self.foraging_id)).write_bytes(latest.read_bytes())
+            logger.info("Copied %s to %s", latest.name, foraging_pkl.name)
         
     def run_script(self, script_name: str | ScriptName) -> None:
 
@@ -241,7 +265,7 @@ class VBNMixin:
 
         with contextlib.suppress(np_services.resources.zro.ZroError):
             np_services.ScriptCamstim.finalize()
-        self.rename_latest_pickle_file(script_name)
+        self.copy_and_rename_latest_pickle_file(script_name)
         
     def run_stim_desktop_theme_script(self, selection: str) -> None:     
         np_services.ScriptCamstim.script = '//allen/programs/mindscope/workgroups/dynamicrouting/ben/change_desktop.py'
@@ -308,7 +332,7 @@ class VBNMixin:
             else:
                 break
         else:
-            np_logging.getLogger().error(f'`experiment.start_recording` failed after multiple attempts', exc_info=last_exception)
+            np_logging.getLogger().error('`experiment.start_recording` failed after multiple attempts', exc_info=last_exception)
             raise last_exception
             
 
