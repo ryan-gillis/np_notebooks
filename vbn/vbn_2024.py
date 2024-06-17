@@ -234,7 +234,8 @@ class VBNMixin:
         if script_name == 'behavior':
             (foraging_pkl := latest.with_stem(f"{self.foraging_id}_{self.mouse.id}_behavior")).write_bytes(latest.read_bytes())
             logger.info("Copied %s to %s", latest.name, foraging_pkl.name)
-        
+            self.stims[0].data_files.append(foraging_pkl)
+            
     def run_script(self, script_name: str | ScriptName) -> None:
 
         if script_name == 'replay' and self.get_behavior_output_path() is None:
