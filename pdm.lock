@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform"]
 lock_version = "4.4.1"
-content_hash = "sha256:73d1b61977f4b51098520d3f78401bdca609728e9bf37d9d64f4dccf3c0efd1b"
+content_hash = "sha256:18203b2ba9b132f044320a4d480f64e96182df3f6edbf235fbb3bffc82f91910"
 
 [[package]]
 name = "aind-codeocean-api"
@@ -2769,7 +2769,7 @@ files = [
 
 [[package]]
 name = "npc-shields"
-version = "0.1.10"
+version = "0.1.11"
 requires_python = ">=3.9"
 summary = "Tools for Neuropixels probe insertion: providing suggested targets, recording actual insertions, storing notes."
 dependencies = [
@@ -2779,8 +2779,8 @@ dependencies = [
     "pydantic>=2.7.1",
 ]
 files = [
-    {file = "npc_shields-0.1.10-py3-none-any.whl", hash = "sha256:0892c1505454215c836c2183ef4c3381aeca720bb17eca8f1e44b26831b6957c"},
-    {file = "npc_shields-0.1.10.tar.gz", hash = "sha256:dba989e9a3d67732c8a296cf71a0e14810f2ffc9a8f2332d75225d28b3a4a394"},
+    {file = "npc_shields-0.1.11-py3-none-any.whl", hash = "sha256:46ada6178e471a51f67dc728f41845c4d6116c7f1907bb65da6d666b8164a25c"},
+    {file = "npc_shields-0.1.11.tar.gz", hash = "sha256:94d56db5cd8c3b10a48f2cb403a22134566fb8a28e5daa94b489b6a4197968ab"},
 ]
 
 [[package]]
