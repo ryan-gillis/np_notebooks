@@ -9,5 +9,5 @@ dependencies = [
     "np-workflows>=1.6.77",
     "npc-sessions>=0.0.222",
     "aind-data-schema==0.33.3",
-    "npc-shields>=0.1.9",
+    "npc-shields>=0.1.11",
 ]
