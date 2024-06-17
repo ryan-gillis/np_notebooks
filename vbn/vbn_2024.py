@@ -223,10 +223,10 @@ class VBNMixin:
         elif latest_start_time == 0:
             raise ValueError(f"latest_start_time is 0: {self.stims[0]} is not correctly logging start times.")
         new_name = f"{self.session.folder}.{script_name}.pkl"
-        if new_name == latest.name:
-            logger.warning("Already renamed %s", latest.name)
-            return None
         new = latest.with_name(new_name)
+        if new.exists():
+            logger.warning("%s already exists - either renaming has been run twice, or files are getting muddled-up. Aborting rename.", latest.name)
+            return None
         new.write_bytes(latest.read_bytes())
         logger.info("Copied %s to %s", latest.name, new.name)
         self.stims[0].data_files.pop()
