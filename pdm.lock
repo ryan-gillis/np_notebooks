@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform"]
 lock_version = "4.4.1"
-content_hash = "sha256:f7c9f9f90cf082b56f6f270db12e86bbb8dabd218ca0cf574d2354df277ae82c"
+content_hash = "sha256:73d1b61977f4b51098520d3f78401bdca609728e9bf37d9d64f4dccf3c0efd1b"
 
 [[package]]
 name = "aind-codeocean-api"
@@ -2578,7 +2578,7 @@ files = [
 
 [[package]]
 name = "np-tools"
-version = "0.1.22"
+version = "0.1.24"
 requires_python = "<4,>=3.7"
 summary = "General-purpose tools for common tasks encountered in Mindscope Neuropixels workflows."
 dependencies = [
@@ -2591,13 +2591,13 @@ dependencies = [
     "rich>=13.3.5",
 ]
 files = [
-    {file = "np_tools-0.1.22-py3-none-any.whl", hash = "sha256:4490ea0248cebf6ce5ea6d751400bff0affe0976c8da8af291ee49fa07811471"},
-    {file = "np_tools-0.1.22.tar.gz", hash = "sha256:63562965377093dc0cb00504a245120221a3e331ce49b4fdac7f5efbbad23297"},
+    {file = "np_tools-0.1.24-py3-none-any.whl", hash = "sha256:d1ff0a1672fb1448987d6d51fdd792c709c6d43654b37f340fb43758450c7627"},
+    {file = "np_tools-0.1.24.tar.gz", hash = "sha256:300252463f4c4b191b8b1d8e18cefc4f38db66d44d5a4561740642f02e2c10dc"},
 ]
 
 [[package]]
 name = "np-workflows"
-version = "1.6.75"
+version = "1.6.78"
 requires_python = "==3.11.*"
 summary = "Ecephys and behavior workflows for the Mindscope Neuropixels team."
 dependencies = [
@@ -2609,7 +2609,7 @@ dependencies = [
     "np-jobs>=0.0.3",
     "np-services>=0.1.69",
     "np-session>=0.6.45",
-    "np-tools>=0.1.14",
+    "np-tools>=0.1.24",
     "npc-sessions>=0.0.225",
     "npc-shields>=0.1.10",
     "pydantic>=2",
@@ -2617,8 +2617,7 @@ dependencies = [
     "universal-pathlib>=0.1.0",
 ]
 files = [
-    {file = "np_workflows-1.6.75-py3-none-any.whl", hash = "sha256:0c09b81b9a8fb5938d4d0c135bdf97acb3922f75313e2fb24646440d693f07b7"},
-    {file = "np_workflows-1.6.75.tar.gz", hash = "sha256:d513bfa01310d242924f5524e5f864590ad29a20666bc6512fcdbf35d18dcb8a"},
+    {file = "np_workflows-1.6.78-py3-none-any.whl", hash = "sha256:884f86fc0cb8699412140fab17dd7de041d582e4e3e82c1792e48f7533491f08"},
 ]
 
 [[package]]
