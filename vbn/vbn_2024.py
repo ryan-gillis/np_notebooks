@@ -301,8 +301,9 @@ class VBNMixin:
         # For each photodoc, create a new VBox to hold the image
         for i, path in enumerate(sorted(self.get_previous_photodocs(), key=lambda p: p.stem)[:4]):
             image = ipw.Image(value=open(path, "rb").read(), format='png')
-            tab.children += (ipw.VBox([image]),)
-            tab.set_title(i, path.stem)
+            title = ipw.Label(value=path.as_posix())
+            tab.children += (ipw.VBox([title, image]),)
+            tab.set_title(i, " ".join(path.stem.split("_")[1:3]))
         return tab
     
     def initialize_and_test_services(self) -> None:
