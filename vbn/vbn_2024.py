@@ -292,6 +292,19 @@ class VBNMixin:
     def stims(self) -> tuple[np_services.Service, ...]:
         return (np_services.ScriptCamstim, )
     
+    def get_previous_photodocs(self) -> tuple[pathlib.Path, ...]:
+        glob_pattern = f"*_{self.mouse.id}_*/*_{self.mouse.id}_*_surface-image3-left*"
+        return self.session.npexp_path.parent.glob(glob_pattern)
+    
+    def get_previous_photodocs_widget(self) -> ipw.Tab:
+        tab = ipw.Tab()
+        # For each photodoc, create a new VBox to hold the image
+        for i, path in enumerate(sorted(self.get_previous_photodocs(), key=lambda p: p.stem)[:4]):
+            image = ipw.Image(value=open(path, "rb").read(), format='png')
+            tab.children += (ipw.VBox([image]),)
+            tab.set_title(i, path.stem)
+        return tab
+    
     def initialize_and_test_services(self) -> None:
         """Configure, initialize (ie. reset), then test all services."""
         
@@ -381,7 +394,7 @@ def new_experiment(
     experiment.workflow = workflow
     
     with contextlib.suppress(Exception):
-        np_logging.web(f'barcode_{experiment.workflow.name.lower()}').info(f"{experiment} created")
+        np_logging.web(f'vbn_{experiment.workflow.name.lower()}').info(f"{experiment} created")
             
     return experiment
 
