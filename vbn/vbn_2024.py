@@ -224,9 +224,11 @@ class VBNMixin:
             raise ValueError(f"latest_start_time is 0: {self.stims[0]} is not correctly logging start times.")
         new_name = f"{self.session.folder}.{script_name}.pkl"
         new = latest.with_name(new_name)
-        if new.exists():
-            logger.warning("%s already exists - either renaming has been run twice, or files are getting muddled-up. Aborting rename.", latest.name)
-            return None
+        idx = 0
+        while new.exists():
+            logger.debug("File %s already exists, adding suffix %s", new.name, idx)
+            idx += 1
+            new = new.with_stem(f"{new.stem}.{idx}")
         new.write_bytes(latest.read_bytes())
         logger.info("Copied %s to %s", latest.name, new.name)
         self.stims[0].data_files.pop()
