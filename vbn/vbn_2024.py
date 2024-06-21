@@ -183,7 +183,9 @@ class VBNMixin:
         """Return the path to the latest behavior output file, if one has been created."""
         return next(
             (
-                np_config.unc_to_local(p).as_posix() for p in reversed(self.stims[0].data_files) if "behavior" in p.name
+                np_config.unc_to_local(p).as_posix() for p in reversed(self.stims[0].data_files) 
+                if "behavior" in p.name
+                and self.session.folder in p.name
             ), 
             None
         )
