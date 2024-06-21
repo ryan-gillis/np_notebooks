@@ -180,10 +180,10 @@ class VBNMixin:
         }
     
     def get_behavior_output_path(self) -> str | None:
-        """Return the path to the behavior output file, if one has been created."""
+        """Return the path to the latest behavior output file, if one has been created."""
         return next(
             (
-                np_config.unc_to_local(p).as_posix() for p in self.stims[0].data_files if "behavior" in p.name
+                np_config.unc_to_local(p).as_posix() for p in reversed(self.stims[0].data_files) if "behavior" in p.name
             ), 
             None
         )
