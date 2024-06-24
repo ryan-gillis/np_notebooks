@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform"]
 lock_version = "4.4.2"
-content_hash = "sha256:070d514ee04863b257163ccd8b226c2afc4e35491e7c01f13607154072dd6e3c"
+content_hash = "sha256:a8a73f806578dd5ce3ae822335009bbd583134bf1dc9a9e053d694ad7382d916"
 
 [[package]]
 name = "aind-codeocean-api"
@@ -2556,7 +2556,7 @@ files = [
 
 [[package]]
 name = "np-session"
-version = "0.6.46"
+version = "0.6.47"
 requires_python = ">=3.7"
 summary = "Tools for accessing data, metadata, and jobs related to ecephys and behavior sessions for the Mindscope Neuropixels team."
 dependencies = [
@@ -2572,8 +2572,8 @@ dependencies = [
     "typing-extensions>=4",
 ]
 files = [
-    {file = "np-session-0.6.46.tar.gz", hash = "sha256:262fe9fb96724f9990991449bb971a6f0645f65d26d091e50a08bad24d0f8a3a"},
-    {file = "np_session-0.6.46-py3-none-any.whl", hash = "sha256:156ae1f04a195c76b50bfccfd211a43a09d85a713ea511cfe223809a82a591ac"},
+    {file = "np-session-0.6.47.tar.gz", hash = "sha256:b596a14566bd134419865c3fb934b64fbc4993e26b2a28d8ac12e41fe8b49146"},
+    {file = "np_session-0.6.47-py3-none-any.whl", hash = "sha256:c0c47c7dd33c7390e8d4a4e2142eabfe66d5f526c26a368f8d30d0618acacd61"},
 ]
 
 [[package]]
