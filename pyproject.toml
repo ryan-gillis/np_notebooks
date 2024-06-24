@@ -10,4 +10,5 @@ dependencies = [
     "npc-sessions>=0.0.222",
     "aind-data-schema==0.33.3",
     "npc-shields>=0.1.11",
+    "np-session>=0.6.46",
 ]
