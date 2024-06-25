@@ -174,7 +174,7 @@ class VBNMixin:
             "regimen": self.mouse.mtrain.regimen['name'],
             "stage": self.mouse.mtrain.stage['name'],
             "max_mapping_duration_min": (
-                self.stage_params['mapping']['max_mapping_duration_min']
+                self.stage_params['max_mapping_duration_min']
                 if self.workflow != Workflow.PRETEST else 1
             ),
         }
