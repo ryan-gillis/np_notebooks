@@ -321,19 +321,24 @@ class VBNMixin:
 
         np_services.NewScaleCoordinateRecorder.log_root = self.session.npexp_path
         np_services.NewScaleCoordinateRecorder.log_name = self.platform_json.path.name
-
-        for path in (
-            self.stage_params['stimulus']['params']['image_set'],
-            self.stage_params['mapping']['flash_path'],
-            self.stage_params['mapping']['gabor_path'],
-        ):
-            if not pathlib.Path(path).exists():
-                raise FileNotFoundError(f"{path} doesn't exist or isn't accessible")
         
         self.configure_services()
 
         super().initialize_and_test_services()
 
+    def check_stim_files_exist(self) -> None:
+        paths = []
+        paths.append(self.stage_params['stimulus']['params']['image_set'])
+        if self.workflow != Workflow.HAB:
+            paths.extend([
+                self.stage_params['mapping']['flash_path'],
+                self.stage_params['mapping']['gabor_path'],
+        ])
+        for path in paths:
+            if not pathlib.Path(path).exists():
+                raise FileNotFoundError(f"{path} doesn't exist or isn't accessible")
+        logger.info("All stim files exist")
+        
     def start_recording(self) -> None:
         last_exception = Exception()
         attempts = 3
