@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform"]
 lock_version = "4.4.2"
-content_hash = "sha256:a8a73f806578dd5ce3ae822335009bbd583134bf1dc9a9e053d694ad7382d916"
+content_hash = "sha256:fcd8b00a7a062bca8f2ffb729f8f814df49c98d4d0173ad4c5c62d80cc3735ba"
 
 [[package]]
 name = "aind-codeocean-api"
@@ -2482,7 +2482,7 @@ files = [
 
 [[package]]
 name = "np-config"
-version = "0.4.33"
+version = "0.4.34"
 requires_python = "<4.0,>=3.7"
 summary = "Config fetching from file or Zookeeper - with local backup - repackaging code from AIBS mpeconfig."
 dependencies = [
@@ -2496,8 +2496,8 @@ dependencies = [
     "typing-extensions>=4",
 ]
 files = [
-    {file = "np_config-0.4.33-py3-none-any.whl", hash = "sha256:e71a35c4e6423b75153790078338d8e3f1812641079842a38eaa1cf84882cf30"},
-    {file = "np_config-0.4.33.tar.gz", hash = "sha256:524cc5fae089db28433d883ed23089a0e89b2b808370891e1293cb583e2dbbbb"},
+    {file = "np_config-0.4.34-py3-none-any.whl", hash = "sha256:4c31a855c9444f2c4381e239c240f46e15a6cc65e1088bd7ffb5e03a210f6d95"},
+    {file = "np_config-0.4.34.tar.gz", hash = "sha256:42fb099dac52958868b1292e6b9bc22120acc238ebe2478dfb4c996d7ac8c547"},
 ]
 
 [[package]]
