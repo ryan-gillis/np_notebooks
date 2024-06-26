@@ -45,6 +45,7 @@ import enum
 import functools
 import pathlib
 import re
+import shutil
 import time
 import uuid
 from typing import Any, Literal, Optional, TypeAlias
@@ -353,7 +354,38 @@ class VBNMixin:
         else:
             np_logging.getLogger().error('`experiment.start_recording` failed after multiple attempts', exc_info=last_exception)
             raise last_exception
-            
+
+    def copy_data_files(self) -> None:
+        """Copy files from raw data storage to session folder for all services
+        except Open Ephys."""
+        
+        # copy vimba files:
+        for file in pathlib.Path(
+            np_config.local_to_unc(self.rig.vidmon, np_services.config_from_zk()['ImageVimba']['data'])
+        ).glob(f'{self.session.npexp_path.name}*'):
+            shutil.copy2(file, self.session.npexp_path)
+            np_workflows.shared.npxc.validate_or_overwrite(self.session.npexp_path / file.name, file)
+            print(file)
+            continue
+
+        for service in self.services:
+            match service.__name__:
+                case "ScriptCamstim" | "SessionCamstim":
+                    files = tuple(f for f in service.data_files if any(f".{k}" in f.stem for k in self.script_names))
+                case "np_services.open_ephys":
+                    continue # copy ephys after other files
+                case "NewScaleCoordinateRecorder":
+                    files = tuple(service.data_root.glob('*')) + tuple(self.rig.paths['NewScaleCoordinateRecorder'].glob('*'))
+                case _:
+                    files = service.data_files or service.get_latest_data('*')
+            if not files:
+                continue
+            files = set(files)
+            print(files)
+            for file in files:
+                shutil.copy2(file, self.session.npexp_path)
+                np_workflows.shared.npxc.validate_or_overwrite(self.session.npexp_path / file.name, file)
+
 
 class Hab(VBNMixin, np_workflows.PipelineHab):
     def __init__(self, *args, **kwargs):
@@ -362,7 +394,7 @@ class Hab(VBNMixin, np_workflows.PipelineHab):
             np_services.Sync,
             np_services.VideoMVR,
             np_services.NewScaleCoordinateRecorder,
-            np_services.SessionCamstim,
+            np_services.ScriptCamstim,
         )
         super().__init__(*args, **kwargs)
 
@@ -374,7 +406,7 @@ class Ephys(VBNMixin, np_workflows.PipelineEphys):
             np_services.Sync,
             np_services.VideoMVR,
             np_services.NewScaleCoordinateRecorder,
-            np_services.SessionCamstim,
+            np_services.ScriptCamstim,
             np_services.OpenEphys,
         )
         super().__init__(*args, **kwargs)
