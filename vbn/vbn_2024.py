@@ -382,14 +382,43 @@ class VBNMixin:
                 case "NewScaleCoordinateRecorder":
                     files = tuple(service.data_root.glob('*')) + tuple(self.rig.paths['NewScaleCoordinateRecorder'].glob('*'))
                 case _:
-                    files = service.data_files or service.get_latest_data('*')
+                    files = None
+                    with contextlib.suppress(AttributeError):
+                        files = service.data_files or service.get_latest_data('*')
             if not files:
                 continue
             files = set(files)
             print(files)
             for file in files:
-                shutil.copy2(file, self.session.npexp_path)
-                np_workflows.shared.npxc.validate_or_overwrite(self.session.npexp_path / file.name, file)
+                renamed = None
+                if file.suffix == '.h5':
+                    renamed = f'{self.session.folder}.sync'
+                elif file.suffix in ('.json', '.mp4') and (cam_label := re.match('Behavior|Eye|Face',file.name)):
+                    renamed = f'{self.session.folder}.{cam_label.group().lower()}{file.suffix}'
+                elif file.suffix in ('.json', '.mp4') and (cam_label := re.match('BEH|EYE|FACE',file.name)):
+                    file_label = {'BEH':'behavior', 'EYE':'eye', 'FACE':'face'}
+                    renamed = f'{self.session.folder}.{file_label[cam_label.group()]}{file.suffix}'
+                elif service in (np_services.NewScaleCoordinateRecorder, ):
+                    renamed = f'{self.session.folder}.motor-locs.csv'
+                elif service in (np_services.Cam3d, np_services.MVR):
+                    for lims_label, img_label  in {
+                            'pre_experiment_surface_image_left': '_surface-image1-left',
+                            'pre_experiment_surface_image_right': '_surface-image1-right',
+                            'brain_surface_image_left': '_surface-image2-left',
+                            'brain_surface_image_right': '_surface-image2-right',
+                            'pre_insertion_surface_image_left': '_surface-image3-left',
+                            'pre_insertion_surface_image_right': '_surface-image3-right',
+                            'post_insertion_surface_image_left': '_surface-image4-left',
+                            'post_insertion_surface_image_right': '_surface-image4-right',
+                            'post_stimulus_surface_image_left': '_surface-image5-left',
+                            'post_stimulus_surface_image_right': '_surface-image5-right',
+                            'post_experiment_surface_image_left': '_surface-image6-left',
+                            'post_experiment_surface_image_right': '_surface-image6-right',
+                        }.items():
+                        if lims_label in file.name:
+                            renamed = f'{self.session.folder}{img_label}{file.suffix}'
+                shutil.copy2(file, self.session.npexp_path / (renamed or file.name))
+                np_workflows.shared.npxc.validate_or_overwrite(self.session.npexp_path / (renamed or file.name), file)
 
 
 class Hab(VBNMixin, np_workflows.PipelineHab):
