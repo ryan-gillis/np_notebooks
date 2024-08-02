@@ -43,6 +43,10 @@ jobs:
         pdm update np_workflows
         
     - name: Add requirements.txt
+      run: | 
+        pdm lock --strategy inherit_metadata
+        
+    - name: Add requirements.txt
       run: |
         pdm export --without-hashes -o requirements.txt
         
