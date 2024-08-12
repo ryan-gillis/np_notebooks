@@ -44,7 +44,7 @@ jobs:
         
     - name: Add requirements.txt
       run: | 
-        pdm lock --strategy inherit_metadata
+        pdm lock --strategy inherit_metadata --update-reuse
         
     - name: Add requirements.txt
       run: |
