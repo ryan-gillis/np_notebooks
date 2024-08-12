@@ -5,7 +5,8 @@ authors = [
 ]
 requires-python = ">=3.11, <3.12"
 dependencies = [
-    "jupyterlab>=3.6",
+    "ipykernel",
+    # "debugpy>=1.8.5",
     "np-workflows>=1.6.79",
     "npc-sessions>=0.0.222",
     "aind-data-schema==0.33.3",
