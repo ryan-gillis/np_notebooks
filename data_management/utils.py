@@ -1,8 +1,10 @@
 from __future__ import annotations
 
 import concurrent.futures
+import configparser
 import datetime
 import functools
+import json
 import logging
 import os
 import pathlib
@@ -27,7 +29,7 @@ pl.Config.set_tbl_rows(-1)
 # suppress SettingWithCopyWarning
 pd.options.mode.chained_assignment = None
 
-os.environ["CODEOCEAN_API"] = np_config.from_zk("/projects/np_codeocean/codeocean")[
+os.environ["CODE_OCEAN_API_TOKEN"] = np_config.from_zk("/projects/np_codeocean/codeocean")[
     "credentials"
 ]["token"]
 
@@ -57,6 +59,84 @@ assert UPLOAD.exists()
 executor = concurrent.futures.ThreadPoolExecutor()
 expected_suffixes = {".h5": "sync", ".hdf5": "stim", ".mp4": "video"}
 
+def get_aws_files() -> dict[Literal['config', 'credentials'], pathlib.Path]:
+    return {
+        'config': pathlib.Path("~").expanduser() / '.aws' / 'config',
+        'credentials': pathlib.Path("~").expanduser() / '.aws' / 'credentials',
+    }
+
+def get_codeocean_files() -> dict[Literal['credentials'], pathlib.Path]:
+    return {
+        'credentials': pathlib.Path("~").expanduser() / '.codeocean' / 'credentials.json',
+    }
+
+def verify_ini_config(path: pathlib.Path, contents: dict, profile: str = 'default') -> None:
+    config = configparser.ConfigParser()
+    if path.exists():
+        config.read(path)
+    if not all(k in config[profile] for k in contents):
+        raise ValueError(f'Profile {profile} in {path} exists but is missing some keys required for codeocean or s3 access.')
+    
+def write_or_verify_ini_config(path: pathlib.Path, contents: dict, profile: str = 'default') -> None:
+    config = configparser.ConfigParser()
+    if path.exists():
+        config.read(path)
+        try:    
+            verify_ini_config(path, contents, profile)
+        except ValueError:
+            pass
+        else:   
+            return
+    config[profile] = contents
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.touch(exist_ok=True)
+    with path.open('w') as f:
+        config.write(f)
+    verify_ini_config(path, contents, profile)
+
+def verify_json_config(path: pathlib.Path, contents: dict) -> None:
+    config = json.loads(path.read_text())
+    if not all(k in config for k in contents):
+        raise ValueError(f'{path} exists but is missing some keys required for codeocean or s3 access.')
+    
+def write_or_verify_json_config(path: pathlib.Path, contents: dict) -> None:
+    if path.exists():
+        try:
+            verify_json_config(path, contents)
+        except ValueError:
+            contents = np_config.merge(json.loads(path.read_text()), contents)
+        else:   
+            return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.touch(exist_ok=True)
+    path.write_text(json.dumps(contents, indent=4))
+    
+def ensure_credentials() -> None:
+    for file, contents in (
+        (get_aws_files()['config'], get_aws_config()),
+        (get_aws_files()['credentials'], get_aws_credentials()),
+    ):
+        write_or_verify_ini_config(file, contents, profile='default')
+    
+    for file, contents in (
+        (get_codeocean_files()['credentials'], get_codeocean_config()),
+    ):
+        write_or_verify_json_config(file, contents)
+        
+@functools.cache
+def get_aws_config() -> dict[Literal['aws_access_key_id', 'aws_secret_access_key'], str]:
+    """Config for connecting to AWS/S3 via awscli/boto3"""
+    return np_config.fetch('/projects/np_codeocean/aws')['config']
+
+@functools.cache
+def get_aws_credentials() -> dict[Literal['domain', 'token'], str]:
+    """Config for connecting to AWS/S3 via awscli/boto3"""
+    return np_config.fetch('/projects/np_codeocean/aws')['credentials']
+
+@functools.cache
+def get_codeocean_config() -> dict[Literal['region'], str]:
+    """Config for connecting to CodeOcean via http API"""
+    return np_config.fetch('/projects/np_codeocean/codeocean')['credentials']
 
 class Config(pydantic.BaseModel):
     folder: str
