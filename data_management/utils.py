@@ -621,12 +621,13 @@ def get_folder_table(
     return table
 
 def create_bat_file(folder_names: Iterable[str], path: pathlib.Path = pathlib.Path("~/Desktop/upload_s3.bat").expanduser()) -> None:
-    txt = f"@REM {datetime.datetime.now().isoformat()}"
+    txt = f"@REM {datetime.datetime.now().isoformat()}\n"
+    txt += f"CD {pathlib.Path.cwd()}\n\n"
     for folder_name in folder_names:
-        txt += f"\nCALL {pathlib.Path(sys.executable).with_name('upload_dr_ecephys.exe')} {folder_name}"
+        txt += f"CALL {pathlib.Path(sys.executable).with_name('upload_dr_ecephys.exe')} {folder_name}\n"
     if path.exists():
         existing = path.read_text()
         txt += "\n"
-        txt += "".join(f"\n{'@REM ' if not line.startswith('@REM ') else ''}{line}" for line in existing.splitlines())
+        txt += "".join(f"{'@REM ' if not line.startswith('@REM ') else ''}{line}\n" for line in existing.splitlines())
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(txt)
