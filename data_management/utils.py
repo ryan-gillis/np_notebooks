@@ -332,7 +332,7 @@ class ConfigWidget(ipw.VBox):
                 existing = Config.from_dict(
                     yaml.safe_load(self.yaml_path.read_text()), self.session_folder
                 )
-                if existing is not None:
+                if existing:
                     self.config = existing
                     print(f"Updating from existing data for {self.session_folder}")
 
