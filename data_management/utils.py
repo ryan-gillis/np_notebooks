@@ -549,6 +549,7 @@ def get_folder_df(ttl_hash: int | None = None):
             pl.when(pl.col("ephys").eq(True))
             .then(pl.col("date").cum_count().over(pl.col("ephys"), pl.col("subject")))
             .otherwise(pl.lit(None))
+            .cast(str)
             .alias("ephys day")
         ).sort("date", "subject", descending=True)
     )
