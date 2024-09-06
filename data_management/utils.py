@@ -329,12 +329,14 @@ class ConfigWidget(ipw.VBox):
     def update_with_previous_data(self) -> None:
         if self.yaml_path.exists():
             with self.console:
-                existing = Config.from_dict(
-                    yaml.safe_load(self.yaml_path.read_text()), self.session_folder
-                )
-                if existing:
-                    self.config = existing
-                    print(f"Updating from existing data for {self.session_folder}")
+                existing = yaml.safe_load(self.yaml_path.read_text())
+                if not existing:
+                    return None
+                e = Config.from_dict(existing, self.session_folder)
+                if e is None:
+                    return None
+                self.config = e
+                print(f"Loaded existing data for {self.session_folder}")
 
     def update_from_text_boxes(self) -> None:
         with self.console:
