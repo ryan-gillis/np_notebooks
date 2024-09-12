@@ -17,6 +17,7 @@ import IPython.display
 import ipywidgets as ipw
 import np_config
 import np_tools
+import npc_lims
 import npc_session
 import pandas as pd
 import panel as pn
@@ -29,9 +30,9 @@ pl.Config.set_tbl_rows(-1)
 # suppress SettingWithCopyWarning
 pd.options.mode.chained_assignment = None
 
-os.environ["CODE_OCEAN_API_TOKEN"] = np_config.from_zk("/projects/np_codeocean/codeocean")[
-    "credentials"
-]["token"]
+os.environ["CODE_OCEAN_API_TOKEN"] = np_config.from_zk(
+    "/projects/np_codeocean/codeocean"
+)["credentials"]["token"]
 
 
 # Suppress SettingWithCopyWarning
@@ -59,84 +60,107 @@ assert UPLOAD.exists()
 executor = concurrent.futures.ThreadPoolExecutor()
 expected_suffixes = {".h5": "sync", ".hdf5": "stim", ".mp4": "video"}
 
-def get_aws_files() -> dict[Literal['config', 'credentials'], pathlib.Path]:
+
+def get_aws_files() -> dict[Literal["config", "credentials"], pathlib.Path]:
     return {
-        'config': pathlib.Path("~").expanduser() / '.aws' / 'config',
-        'credentials': pathlib.Path("~").expanduser() / '.aws' / 'credentials',
+        "config": pathlib.Path("~").expanduser() / ".aws" / "config",
+        "credentials": pathlib.Path("~").expanduser() / ".aws" / "credentials",
     }
 
-def get_codeocean_files() -> dict[Literal['credentials'], pathlib.Path]:
+
+def get_codeocean_files() -> dict[Literal["credentials"], pathlib.Path]:
     return {
-        'credentials': pathlib.Path("~").expanduser() / '.codeocean' / 'credentials.json',
+        "credentials": pathlib.Path("~").expanduser()
+        / ".codeocean"
+        / "credentials.json",
     }
 
-def verify_ini_config(path: pathlib.Path, contents: dict, profile: str = 'default') -> None:
+
+def verify_ini_config(
+    path: pathlib.Path, contents: dict, profile: str = "default"
+) -> None:
     config = configparser.ConfigParser()
     if path.exists():
         config.read(path)
     if not all(k in config[profile] for k in contents):
-        raise ValueError(f'Profile {profile} in {path} exists but is missing some keys required for codeocean or s3 access.')
-    
-def write_or_verify_ini_config(path: pathlib.Path, contents: dict, profile: str = 'default') -> None:
+        raise ValueError(
+            f"Profile {profile} in {path} exists but is missing some keys required for codeocean or s3 access."
+        )
+
+
+def write_or_verify_ini_config(
+    path: pathlib.Path, contents: dict, profile: str = "default"
+) -> None:
     config = configparser.ConfigParser()
     if path.exists():
         config.read(path)
-        try:    
+        try:
             verify_ini_config(path, contents, profile)
         except ValueError:
             pass
-        else:   
+        else:
             return
     config[profile] = contents
     path.parent.mkdir(parents=True, exist_ok=True)
     path.touch(exist_ok=True)
-    with path.open('w') as f:
+    with path.open("w") as f:
         config.write(f)
     verify_ini_config(path, contents, profile)
+
 
 def verify_json_config(path: pathlib.Path, contents: dict) -> None:
     config = json.loads(path.read_text())
     if not all(k in config for k in contents):
-        raise ValueError(f'{path} exists but is missing some keys required for codeocean or s3 access.')
-    
+        raise ValueError(
+            f"{path} exists but is missing some keys required for codeocean or s3 access."
+        )
+
+
 def write_or_verify_json_config(path: pathlib.Path, contents: dict) -> None:
     if path.exists():
         try:
             verify_json_config(path, contents)
         except ValueError:
             contents = np_config.merge(json.loads(path.read_text()), contents)
-        else:   
+        else:
             return
     path.parent.mkdir(parents=True, exist_ok=True)
     path.touch(exist_ok=True)
     path.write_text(json.dumps(contents, indent=4))
-    
+
+
 def ensure_credentials() -> None:
     for file, contents in (
-        (get_aws_files()['config'], get_aws_config()),
-        (get_aws_files()['credentials'], get_aws_credentials()),
+        (get_aws_files()["config"], get_aws_config()),
+        (get_aws_files()["credentials"], get_aws_credentials()),
     ):
-        write_or_verify_ini_config(file, contents, profile='default')
-    
+        write_or_verify_ini_config(file, contents, profile="default")
+
     for file, contents in (
-        (get_codeocean_files()['credentials'], get_codeocean_config()),
+        (get_codeocean_files()["credentials"], get_codeocean_config()),
     ):
         write_or_verify_json_config(file, contents)
-        
-@functools.cache
-def get_aws_config() -> dict[Literal['aws_access_key_id', 'aws_secret_access_key'], str]:
-    """Config for connecting to AWS/S3 via awscli/boto3"""
-    return np_config.fetch('/projects/np_codeocean/aws')['config']
+
 
 @functools.cache
-def get_aws_credentials() -> dict[Literal['domain', 'token'], str]:
+def get_aws_config() -> (
+    dict[Literal["aws_access_key_id", "aws_secret_access_key"], str]
+):
     """Config for connecting to AWS/S3 via awscli/boto3"""
-    return np_config.fetch('/projects/np_codeocean/aws')['credentials']
+    return np_config.fetch("/projects/np_codeocean/aws")["config"]
+
 
 @functools.cache
-def get_codeocean_config() -> dict[Literal['region'], str]:
+def get_aws_credentials() -> dict[Literal["domain", "token"], str]:
+    """Config for connecting to AWS/S3 via awscli/boto3"""
+    return np_config.fetch("/projects/np_codeocean/aws")["credentials"]
+
+
+@functools.cache
+def get_codeocean_config() -> dict[Literal["region"], str]:
     """Config for connecting to CodeOcean via http API"""
-    return np_config.fetch('/projects/np_codeocean/codeocean')['credentials']
+    return np_config.fetch("/projects/np_codeocean/codeocean")["credentials"]
+
 
 class Config(pydantic.BaseModel):
     folder: str
@@ -202,14 +226,24 @@ class Config(pydantic.BaseModel):
         """Assumes each session is only in one project/session type"""
         for session_type, project_to_sessions in data.items():
             for project, sessions in project_to_sessions.items():
-                for path_to_config in sessions:
-                    path = next(iter(path_to_config.keys()))
+                if not sessions:
+                    continue
+                for config in sessions:
+                    if isinstance(config, dict):
+                        path = next(iter(config.keys()))
+                    else:
+                        assert isinstance(config, str)
+                        path = config
                     if session_id in path:
                         return cls(
                             session_type=session_type,
                             project=project,
                             folder=pathlib.Path(path).name,
-                            **next(iter(path_to_config.values())),
+                            **(
+                                next(iter(config.values()))
+                                if isinstance(config, dict)
+                                else {}
+                            ),
                         )
         return None
 
@@ -296,12 +330,13 @@ class ConfigWidget(ipw.VBox):
                 placeholder=self.placeholders.get(name, ""),
                 tooltip=field.description or name,
                 continuous_update=True,
-                layout=ipw.Layout(width="100%"),
+                layout=ipw.Layout(width="500px", description_width="400px"),
                 value=(
                     str(getattr(self.config, name))
                     if getattr(self.config, name) is not None
                     else ""
                 ),
+                style={"description_width": "initial"},
             )
             for name, field in self.config.model_fields.items()
         }
@@ -329,7 +364,7 @@ class ConfigWidget(ipw.VBox):
     def update_with_previous_data(self) -> None:
         if self.yaml_path.exists():
             with self.console:
-                existing = yaml.safe_load(self.yaml_path.read_text())
+                existing = yaml.safe_load(self.yaml_path.read_text()) or {}
                 if not existing:
                     return None
                 e = Config.from_dict(existing, self.session_folder)
@@ -352,7 +387,7 @@ class ConfigWidget(ipw.VBox):
             self.update_from_text_boxes()
             if self.yaml_path.exists():
                 print(f"Updating {self.yaml_path}")
-                existing = yaml.safe_load(self.yaml_path.read_text())
+                existing = yaml.safe_load(self.yaml_path.read_text()) or {}
             else:
                 print(f"Creating {self.yaml_path}")
                 self.yaml_path.parent.mkdir(parents=True, exist_ok=True)
@@ -455,6 +490,9 @@ def validate_folder_contents(folder_names: Iterable[str]) -> None:
 def display_config_widgets(session_folders: Iterable[str]) -> None:
     for folder in session_folders:
         if "surface_channel" in folder:
+            print(
+                "Skipping surface channel folder: metadata is same as main session folder"
+            )
             continue  # metadata for surface channel is same as main session folder
         row = get_folder_df(ttl_hash=aind_session.get_ttl_hash(600)).filter(
             pl.col("folder") == folder
@@ -558,6 +596,30 @@ def get_folder_df(ttl_hash: int | None = None):
     return df
 
 
+def get_folders_with_no_metadata() -> tuple[str, ...]:
+    sessions = []
+    config_yamls = [
+        c
+        for c in (
+            npc_lims.tracked_sessions._TRACKED_SESSIONS_FILE,
+            UPLOAD / "new_sessions.yaml",
+        )
+        if c.exists()
+    ]
+    for row in get_folder_df(ttl_hash=aind_session.get_ttl_hash(600)).iter_rows(named=True):
+        if not row['ephys']:
+            continue
+        for config_yaml in config_yamls:
+            config = Config.from_dict(
+                yaml.safe_load(config_yaml.read_text()) or {}, row['folder']
+            )
+            if config is not None:
+                break
+        else:
+            sessions.append(row['folder'])
+    return tuple(sorted(sessions, reverse=True))
+
+
 def get_folder_table(
     ephys_only: bool = False,
     unstarted_only: bool = False,
@@ -606,7 +668,7 @@ def get_folder_table(
         # groupby=["subject"],
         page_size=15,
         value=df,
-        selectable='checkbox-single',
+        selectable="checkbox-single",
         # disabled=True,
         show_index=False,
         sizing_mode="stretch_width",
@@ -622,7 +684,11 @@ def get_folder_table(
     table.style.map(color_negative_red)
     return table
 
-def create_bat_file(folder_names: Iterable[str], path: pathlib.Path = pathlib.Path("~/Desktop/upload_s3.bat").expanduser()) -> None:
+
+def create_bat_file(
+    folder_names: Iterable[str],
+    path: pathlib.Path = pathlib.Path("~/Desktop/upload_s3.bat").expanduser(),
+) -> None:
     txt = f"@REM {datetime.datetime.now().isoformat()}\n"
     txt += f"CD {pathlib.Path.cwd()}\n\n"
     for folder_name in folder_names:
@@ -630,6 +696,9 @@ def create_bat_file(folder_names: Iterable[str], path: pathlib.Path = pathlib.Pa
     if path.exists():
         existing = path.read_text()
         txt += "\n"
-        txt += "".join(f"{'@REM ' if not line.startswith('@REM ') else ''}{line}\n" for line in existing.splitlines())
+        txt += "".join(
+            f"{'@REM ' if not line.startswith('@REM ') else ''}{line}\n"
+            for line in existing.splitlines()
+        )
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(txt)
