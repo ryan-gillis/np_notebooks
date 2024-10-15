@@ -145,7 +145,7 @@ np-logging==0.5.1
 np-services==0.1.69
 np-session==0.6.47
 np-tools==0.1.24
-np-workflows==1.6.81
+np-workflows==1.6.83
 npc-ephys==0.1.16
 npc-io==0.1.29
 npc-lims==0.1.168
