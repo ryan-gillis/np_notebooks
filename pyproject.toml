@@ -6,12 +6,10 @@ authors = [
 requires-python = ">=3.11, <3.12"
 dependencies = [
     "ipykernel",
-    # "debugpy>=1.8.5",
     "np-workflows>=1.6.84",
     "npc-sessions>=0.0.222",
-    "aind-data-schema==0.33.3",
     "npc-shields>=0.1.12",
     "np-session>=0.6.47",
     "np-config>=0.4.34",
-    "np-codeocean>=0.3.0",
+    "np-codeocean>=0.3.0[dynamic-routing-metadata]",
 ]
