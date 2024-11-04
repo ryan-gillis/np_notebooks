@@ -11,5 +11,5 @@ dependencies = [
     "npc-shields>=0.1.12",
     "np-session>=0.6.47",
     "np-config>=0.4.34",
-    "np-codeocean[dynamic-routing-metadata]>=0.3.0",
+    "np-codeocean[dynamic-routing-metadata]>=0.3.1",
 ]
