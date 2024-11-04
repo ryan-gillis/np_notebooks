@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:3be50f2b845352aadb7c2d54824a569d42a47f38a80021f7af9b2ce030130a97"
+content_hash = "sha256:f28bddfe120b6c75e28acbbfb758157dc6a1cc66528b8de8cc32796db3051834"
 
 [[metadata.targets]]
 requires_python = ">=3.11,<3.12"
@@ -2343,7 +2343,7 @@ files = [
 
 [[package]]
 name = "np-codeocean"
-version = "0.3.0"
+version = "0.3.1"
 requires_python = ">=3.10"
 summary = "Tools for uploading and interacting with Mindscope Neuropixels experiments on Code Ocean"
 groups = ["default"]
@@ -2358,13 +2358,13 @@ dependencies = [
     "requests>=2.31.0",
 ]
 files = [
-    {file = "np_codeocean-0.3.0-py3-none-any.whl", hash = "sha256:d767dcf2482d94414bee118f60f203ddfa4e4d396518c1cbe4222931b6fca0cf"},
-    {file = "np_codeocean-0.3.0.tar.gz", hash = "sha256:a294e2d412bba8337fcdb942c80a80f303805733baed0e2320cad0440f12a927"},
+    {file = "np_codeocean-0.3.1-py3-none-any.whl", hash = "sha256:190a4c7c03cd3d89dd95f4a74a0753e5805ede0f148bba1171bf55f5bac85326"},
+    {file = "np_codeocean-0.3.1.tar.gz", hash = "sha256:8f99b61ac5811b94ee20f87d1ada8bd026a89f917b7714d050b91c876b2ca0ca"},
 ]
 
 [[package]]
 name = "np-codeocean"
-version = "0.3.0"
+version = "0.3.1"
 extras = ["dynamic-routing-metadata"]
 requires_python = ">=3.10"
 summary = "Tools for uploading and interacting with Mindscope Neuropixels experiments on Code Ocean"
@@ -2374,13 +2374,13 @@ dependencies = [
     "aind-data-transfer-models>=0.13.1",
     "aind-metadata-mapper==0.18.2",
     "np-aind-metadata>=0.1.17",
-    "np-codeocean==0.3.0",
+    "np-codeocean==0.3.1",
     "npc-lims>=0.1.154",
     "npc-sessions>=0.0.253",
 ]
 files = [
-    {file = "np_codeocean-0.3.0-py3-none-any.whl", hash = "sha256:d767dcf2482d94414bee118f60f203ddfa4e4d396518c1cbe4222931b6fca0cf"},
-    {file = "np_codeocean-0.3.0.tar.gz", hash = "sha256:a294e2d412bba8337fcdb942c80a80f303805733baed0e2320cad0440f12a927"},
+    {file = "np_codeocean-0.3.1-py3-none-any.whl", hash = "sha256:190a4c7c03cd3d89dd95f4a74a0753e5805ede0f148bba1171bf55f5bac85326"},
+    {file = "np_codeocean-0.3.1.tar.gz", hash = "sha256:8f99b61ac5811b94ee20f87d1ada8bd026a89f917b7714d050b91c876b2ca0ca"},
 ]
 
 [[package]]
