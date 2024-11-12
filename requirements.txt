@@ -139,7 +139,7 @@ ndx-pose==0.1.1
 nest-asyncio==1.6.0
 notebook-shim==0.2.4
 np-aind-metadata==0.1.17
-np-codeocean[dynamic-routing-metadata]==0.3.0
+np-codeocean[dynamic-routing-metadata]==0.3.1
 np-config==0.4.34
 np-jobs==0.0.9
 np-logging==0.5.1
