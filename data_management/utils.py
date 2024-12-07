@@ -205,7 +205,7 @@ class Config(pydantic.BaseModel):
     def cast_to_upper_case(cls, v):
         return v.upper() if isinstance(v, str) else v
 
-    def to_dict(self) -> dict[str, any]:
+    def to_dict(self) -> dict[str, Any]:
         data = self.model_dump()
         return {
             data.pop("session_type"): {
