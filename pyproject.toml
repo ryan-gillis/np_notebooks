@@ -6,7 +6,7 @@ authors = [
 requires-python = ">=3.11, <3.12"
 dependencies = [
     "ipykernel",
-    "np-workflows>=1.6.84",
+    "np-workflows>=1.6.86",
     "npc-sessions>=0.0.222",
     "npc-shields>=0.1.12",
     "np-session>=0.6.47",
