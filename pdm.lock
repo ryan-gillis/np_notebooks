@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:f28bddfe120b6c75e28acbbfb758157dc6a1cc66528b8de8cc32796db3051834"
+content_hash = "sha256:ac8f5e8741069189bc4e5df8a451f24d76a35da415f52ea5f4f07c721e780c2a"
 
 [[metadata.targets]]
 requires_python = ">=3.11,<3.12"
@@ -2506,7 +2506,7 @@ files = [
 
 [[package]]
 name = "np-workflows"
-version = "1.6.84"
+version = "1.6.86"
 requires_python = "==3.11.*"
 summary = "Ecephys and behavior workflows for the Mindscope Neuropixels team."
 groups = ["default"]
@@ -2530,8 +2530,8 @@ dependencies = [
     "universal-pathlib>=0.1.0",
 ]
 files = [
-    {file = "np_workflows-1.6.84-py3-none-any.whl", hash = "sha256:fa0ec44c6131e625c526a26f271d6fdbe2f58630de4b1b79117013ddf4a269ea"},
-    {file = "np_workflows-1.6.84.tar.gz", hash = "sha256:ada03c0e883b0233af09705e79e16589dea850aa0d2107515a812232a07ff175"},
+    {file = "np_workflows-1.6.86-py3-none-any.whl", hash = "sha256:a281151457a972a9ea4693d4e09e69a22849eea35f0ae66f65278d1ef29ecbc4"},
+    {file = "np_workflows-1.6.86.tar.gz", hash = "sha256:a7bab02f11372a72151eee989097a62150f7ff71037b9a27d04c99b09aa265af"},
 ]
 
 [[package]]
