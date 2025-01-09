@@ -154,7 +154,7 @@ npc-mvr==0.1.9
 npc-samstim==0.1.4
 npc-session==0.1.39
 npc-sessions==0.0.254
-npc-shields==0.1.12
+npc-shields==0.1.13
 npc-stim==0.1.9
 npc-sync==0.1.23
 numba==0.60.0
