@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:c692820e2930c0ff641a56d6ac3306b77f6447bbc59edca0720b7e25fe135444"
+content_hash = "sha256:c9c11a93c31ee4321297b225e52a7ffc24e6f530c884531de3973534aa5973ec"
 
 [[metadata.targets]]
 requires_python = ">=3.11,<3.12"
@@ -2506,7 +2506,7 @@ files = [
 
 [[package]]
 name = "np-workflows"
-version = "1.6.86"
+version = "1.6.87"
 requires_python = "==3.11.*"
 summary = "Ecephys and behavior workflows for the Mindscope Neuropixels team."
 groups = ["default"]
@@ -2530,8 +2530,8 @@ dependencies = [
     "universal-pathlib>=0.1.0",
 ]
 files = [
-    {file = "np_workflows-1.6.86-py3-none-any.whl", hash = "sha256:a281151457a972a9ea4693d4e09e69a22849eea35f0ae66f65278d1ef29ecbc4"},
-    {file = "np_workflows-1.6.86.tar.gz", hash = "sha256:a7bab02f11372a72151eee989097a62150f7ff71037b9a27d04c99b09aa265af"},
+    {file = "np_workflows-1.6.87-py3-none-any.whl", hash = "sha256:83d81054a0049347cd4825e677399864deb75819b31e843949f33e0e28946609"},
+    {file = "np_workflows-1.6.87.tar.gz", hash = "sha256:c9223ac3a89eef9c997c149b4c059d13429713dc0e05fea9a2ec4325db325219"},
 ]
 
 [[package]]
@@ -2689,7 +2689,7 @@ files = [
 
 [[package]]
 name = "npc-shields"
-version = "0.1.13"
+version = "0.1.14"
 requires_python = ">=3.9"
 summary = "Tools for Neuropixels probe insertion: providing suggested targets, recording actual insertions, storing notes."
 groups = ["default"]
@@ -2700,8 +2700,8 @@ dependencies = [
     "pydantic>=2.7.1",
 ]
 files = [
-    {file = "npc_shields-0.1.13-py3-none-any.whl", hash = "sha256:ba9b6b2a5d9e68a9983d2cd390d7c4d0c1a5fa2ecbfdc062cf60b39ddfbbc02b"},
-    {file = "npc_shields-0.1.13.tar.gz", hash = "sha256:e3adccaab115afbe898e9168bed3905eef2a054cb7a44fecfdc8534e46c85bcc"},
+    {file = "npc_shields-0.1.14-py3-none-any.whl", hash = "sha256:7ca0eeaa297dae2fca3924eaebfd6100e876b02c07a9460c90381a711262f1f6"},
+    {file = "npc_shields-0.1.14.tar.gz", hash = "sha256:119e52c3750129b7cd7d31079d44bd89713bca3e1da0e9ac29c803695af83a98"},
 ]
 
 [[package]]
