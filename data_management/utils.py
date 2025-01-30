@@ -544,7 +544,7 @@ def get_folder_df(ttl_hash: int | None = None):
         logger.info(f"Fetching info for {s}")
         row = dict.fromkeys(columns, None)
         row["folder"] = s
-        row["ephys"] = (EPHYS / s / s).exists()
+        row["ephys"] = bool(next((EPHYS / s).rglob('settings*.xml'), None))
         row["date"] = npc_session.extract_isoformat_date(s)
         row["subject"] = str(npc_session.extract_subject(s))
         upload = UPLOAD / s / "upload.csv"
