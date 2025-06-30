@@ -40,7 +40,9 @@ jobs:
 
     - name: Install package
       run: |
+        pdm lock --strategy inherit_metadata --update-reuse
         pdm update np_workflows
+        
         
     - name: Add requirements.txt
       run: |

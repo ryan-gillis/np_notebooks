@@ -4,5 +4,12 @@ authors = [
     { name = "bjhardcastle", email = "ben.hardcastle@alleninstitute.org" },
 ]
 requires-python = ">=3.11, <3.12"
-dependencies = ["jupyterlab>=3.6", "np-workflows>=1.6.46", "npc-sessions>=0.0.119",]
-
+dependencies = [
+    "ipykernel",
+    "np-workflows>=1.6.87",
+    "npc-sessions>=0.0.222",
+    "npc-shields>=0.1.14",
+    "np-session>=0.6.47",
+    "np-config>=0.4.34",
+    "np-codeocean[dynamic-routing-metadata]>=0.3.1",
+]
